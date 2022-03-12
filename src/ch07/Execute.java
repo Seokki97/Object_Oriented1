@@ -8,7 +8,7 @@ public class Execute {
     studentLee.setMathSubject("수학", 100);
 
 
-    Student studentPark = new Student(100, "lee");
+    Student studentPark = new Student(100, "Park");
 
     studentPark.setKoreaSubject("국어", 100);
     studentPark.setMathSubject("수학", 100);

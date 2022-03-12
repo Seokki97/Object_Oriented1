@@ -7,7 +7,7 @@ public class Student {
     Subject korea;
     Subject math;
 
-    Student(int studentId, String StudentName){
+    Student(int studentId, String studentName){
         this.studentId = studentId;
         this.studentName = studentName;
 
