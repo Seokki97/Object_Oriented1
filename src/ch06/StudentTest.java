@@ -2,6 +2,6 @@ package ch06;
 
 public class StudentTest {
     public static void main(String[] args) {
-
+        Student StudentLee = new Student();
     }
 }
