@@ -12,13 +12,13 @@ public class BrithDay {
     }
 
     public void setDay(int day){
-        if(day<1 || day >31){
+        /*if(day<1 || day >31){
             isVaild = false;
-        }
-        else {
-            isVaild = true;
+        }*/
+        //else {
+
             this.day = day;
-        }
+        //}
 
     }
 
@@ -41,18 +41,18 @@ public class BrithDay {
     }
 
     public void setYear(int year){
-        if(year<1 || year >9999){
+        /*if(year<1 || year >9999){
             isVaild = false;
-        }
-        else {
-            isVaild = true;
+        }*/
+        //else {
+
             this.year = year;
-        }
+        //}
     }
 
     public void showDate(){
         if(isVaild == true) {
-            System.out.println( this.year + "년" + this.month + "월" + this.day + "일 입니다.");
+            System.out.println( year + "년" + month + "월" + day + "일 입니다.");
         }
         else{
             System.out.println("유효하지 않은 날짜입니다.");
