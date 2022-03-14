@@ -13,7 +13,8 @@ StringBuffer sb = new StringBuffer();
 sb.append("하이");  
 sb.append(" ");  
 sb.append("객체지향!");  
---> 하이 객체지향!
+String result = sb.toString(); <-- toString()메소드를 이용하여 string 자료형으로 변경한다.
+--> 하이 객체지향!  
 
 insert
 ------------
