@@ -28,3 +28,8 @@ substring
 System.out.println(sb.substring(0,4));  
 --> Hell  
 인덱스 시작부터 끝위치까지 문자를 뽑아낸다.
+
+장점 !
+---------------
+String 문자열을 += "~" 해서도 결과는 똑같지만  
+이는 메모리에 큰 공간을 차지해 문제가 비효율적이다. 따라서 StringBuffer을 쓰는 것이다.  
