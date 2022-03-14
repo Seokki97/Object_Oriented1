@@ -13,7 +13,12 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
+    public Person getPerson(){ //반환타입이 자기자신으로하여 자기자신의 주소값을 반환.
+        return this;
+    }
     public void showPerson(){
         System.out.println(name + age);
+
     }
 }
