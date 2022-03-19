@@ -5,8 +5,6 @@ public class Person {
 
     String personName;
 
-    Transportation TP = new Transportation();
-
     public Person(){}
 
     public Person(String personName, int money){
