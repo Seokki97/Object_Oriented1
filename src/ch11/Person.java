@@ -17,6 +17,6 @@ public class Person {
 
 
     public void showPersonInfo(){
-
+    System.out.println(personName+money);
     }
 }
