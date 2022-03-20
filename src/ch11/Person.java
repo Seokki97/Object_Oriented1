@@ -1,6 +1,7 @@
 package ch11;
 
 public class Person {
+    //내가 짠것
     int money;
     String trans;
     String personName;
@@ -12,6 +13,9 @@ public class Person {
         this.trans = trans;
         this.money = money;
         }
+
+        //강의 자료
+
 
 
 

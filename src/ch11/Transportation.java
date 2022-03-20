@@ -1,6 +1,7 @@
 package ch11;
 
 public class Transportation {
+    //내가 짠것
     String transformation;
     int price;
     String kind;
@@ -15,4 +16,8 @@ public class Transportation {
     public void showTransportInfo(){
         System.out.println(this.transformation+this.price);
     }
+
+    //강의 자료
+
+
 }
