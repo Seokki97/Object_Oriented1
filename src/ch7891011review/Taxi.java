@@ -5,10 +5,12 @@ public class Taxi {
     String taxiName;
     int income;
     int count;
+
     public Taxi( String taxiName,int price){
         this.taxiName = taxiName;
         this.price = price;
     }
+
     public void takeTaxi(int income){
         this.income += income;
         count++;
