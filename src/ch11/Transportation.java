@@ -39,7 +39,7 @@ public class Transportation {
         System.out.println("~~~");
     }
 
-    public class Bus{
+    public class Bus{ //학생이 버스를 탔을 때 매개변수에 인스턴스를 생성하여 이를 사용하는 것이다.
         int busNumber;
         int passengerCount;
         int money;
