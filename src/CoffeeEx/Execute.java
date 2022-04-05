@@ -9,6 +9,6 @@ public class Execute {
         Menu makiyato = new Menu(2500);
         Menu capuchino = new Menu(2000);
 
-        ct1.orderMenu(americano);
+        ct1.orderMenu(1500);
     }
 }
