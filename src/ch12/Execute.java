@@ -11,6 +11,16 @@ public class Execute {
         System.out.println(c1.getEmployeeName());
         System.out.println(c1.getDepartment());
         System.out.println(c1.getEmployeeId());
+        c1.serialNum++;
+
+        Employee c2 = new Employee();
+
+        c2.setEmployeeName("시영");
+        c2.setEmployeeId(c2.serialNum);
+
+        System.out.println(c2.getEmployeeId());
+        System.out.println(c2.getEmployeeName());
+
 
 
     }
