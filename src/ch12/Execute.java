@@ -20,7 +20,8 @@ public class Execute {
 
         System.out.println(c2.serialNum);
         System.out.println(c2.getEmployeeName());
-        System.out.println(c1.getEmployeeId());
+        System.out.println(c1.serialNum); // serialNum은 공유가 됐다 .근데
+        System.out.println(c1.getEmployeeId()); //는 변함이 없다.
 
 
 
