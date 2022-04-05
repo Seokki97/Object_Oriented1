@@ -9,18 +9,15 @@ public class Execute {
         c1.setDepartment("개발자");
 
         System.out.println(c1.getEmployeeName());
-        System.out.println(c1.getDepartment());
-        System.out.println(c1.getEmployeeId());
+               System.out.println(c1.getEmployeeId());
 
         Employee c2 = new Employee();
 
         c2.setEmployeeName("시영");
-        c2.setEmployeeId(c2.serialNum);
 
-        System.out.println(c2.serialNum);
         System.out.println(c2.getEmployeeName());
-        System.out.println(c1.serialNum); // serialNum은 공유가 됐다 .근데
-        System.out.println(c1.getEmployeeId()); //는 변함이 없다.
+        //System.out.println(c1.serialNum); // serialNum은 공유가 됐다 .근데
+        System.out.println(c2.getEmployeeId()); //는 변함이 없다.
 
 
 

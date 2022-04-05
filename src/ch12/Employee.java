@@ -11,7 +11,7 @@ public class Employee {
     public Employee(){
         serialNum++;
         employeeId = serialNum;
-    }
+    } //한명씩 사번 부여하고 증가하기
     public int getEmployeeId(){
         return employeeId;
     }
