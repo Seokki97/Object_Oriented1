@@ -11,7 +11,6 @@ public class Execute {
         System.out.println(c1.getEmployeeName());
         System.out.println(c1.getDepartment());
         System.out.println(c1.getEmployeeId());
-        c1.serialNum++;
 
         Employee c2 = new Employee();
 
