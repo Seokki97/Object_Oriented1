@@ -2,7 +2,7 @@ package ch12;
 
 public class Employee {
 
-    static int serialNum = 1000;
+    public static int serialNum = 1000;
 
     private int employeeId;
     private String employeeName;

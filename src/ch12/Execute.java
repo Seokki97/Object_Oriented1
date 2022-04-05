@@ -18,8 +18,9 @@ public class Execute {
         c2.setEmployeeName("시영");
         c2.setEmployeeId(c2.serialNum);
 
-        System.out.println(c2.getEmployeeId());
+        System.out.println(c2.serialNum);
         System.out.println(c2.getEmployeeName());
+        System.out.println(c1.getEmployeeId());
 
 
 
