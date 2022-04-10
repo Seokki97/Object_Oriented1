@@ -10,7 +10,9 @@ public class Car {
     public Car(){
         carSerialNum++;
         carNum = carSerialNum;
+
     }
+
 
     public int getCarNum(){
         return carNum;

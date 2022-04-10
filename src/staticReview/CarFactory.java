@@ -12,9 +12,9 @@ public class CarFactory {
         return instance;
     }
 
-    public Car createCar(){
+    public  Car createCar(Car car){
 
-        return  ;
+        return  car.setSerialNum();
     }
 
 
