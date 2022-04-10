@@ -12,8 +12,8 @@ public class CarFactory {
         return instance;
     }
 
-    public  Car createCar(Car car){
-
+    public  Car createCar(){
+        Car car = new Car();
         return  car;
     }
 
