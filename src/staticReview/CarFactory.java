@@ -4,9 +4,9 @@ public class CarFactory {
 
     private static CarFactory instance = new CarFactory();
 
-    private CarFactory(){
 
-    }
+    private CarFactory(){
+ }
 
     public static CarFactory getInstance(){
         return instance;
@@ -14,7 +14,7 @@ public class CarFactory {
 
     public  Car createCar(Car car){
 
-        return  car.setSerialNum();
+        return  car;
     }
 
 
