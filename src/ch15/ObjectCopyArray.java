@@ -11,7 +11,7 @@ public class ObjectCopyArray {
         library[3] = new Book("태백산맥4", "조정래");
         library[4] = new Book("태백산맥5", "조정래");
 
-        System.arraycopy(library, 0, copyLibrary, 0, 5);
+       //주소복사 메서드 System.arraycopy(library, 0, copyLibrary, 0, 5);
         System.out.println("== library ==");
         for (int i = 0; i < library.length; i++) {
             //  System.out.println(library[i]);
@@ -22,6 +22,12 @@ public class ObjectCopyArray {
                 //  System.out.println(library[i]);
                 library[j].showBookInfo();
             }
+        copyLibrary[0] = new Book();
+        copyLibrary[1] = new Book();
+        copyLibrary[2] = new Book();
+        copyLibrary[3] = new Book();
+        copyLibrary[4] = new Book();
         }
+
     }
 
