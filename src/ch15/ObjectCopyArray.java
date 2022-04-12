@@ -22,11 +22,6 @@ public class ObjectCopyArray {
                 //  System.out.println(library[i]);
                 library[j].showBookInfo();
             }
-        copyLibrary[0] = new Book();
-        copyLibrary[1] = new Book();
-        copyLibrary[2] = new Book();
-        copyLibrary[3] = new Book();
-        copyLibrary[4] = new Book();
         }
 
     }
