@@ -1,15 +1,20 @@
 package ArrayListReview;
 
-import java.util.ArrayList;
-
 public class Subject {
-    String subjectName;
+    private String subjectName;
     int score;
 
-    public Subject(String subjectName, int score){
+    public Subject(String subjectName){
         this.subjectName = subjectName;
-        this.score = score;
     }
+
+    public void getSubjectName(){
+        this.subjectName = subjectName;
+    }
+    public String setSubjectName(){
+        return subjectName;
+    }
+
 
 
 
