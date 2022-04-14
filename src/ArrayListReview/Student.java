@@ -3,11 +3,11 @@ package ArrayListReview;
 public class Student {
 
     private static int studentId = 1000;
-    String studentName;
+    int subjectCount;
     int id;
 
-    public Student(String studentName){
-        this.studentName = studentName;
+    public Student(int subjectCount){
+        this.subjectCount = subjectCount;
     }
 
     public void getStudentId(){
