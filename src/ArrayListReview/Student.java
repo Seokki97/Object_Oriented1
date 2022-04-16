@@ -36,9 +36,9 @@ public class Student {
     public void showStudentInfo(){
 
         int total = 0 ;
-        for(Subject s : subjectList){
-            total += s.getScore();
-            System.out.println("학생" + studentName + "의" + s.getName() + "성적은" + s.getScore() + "입니다");
+        for(Subject subject : subjectList){ //for each문임
+            total += subject.getScore();
+            System.out.println("학생" + studentName + "의" + subject.getName() + "성적은" + subject.getScore() + "입니다");
         }
     }
 
