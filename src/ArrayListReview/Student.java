@@ -13,7 +13,7 @@ public class Student {
         this.studentId = studentId;
         this.studentName = studentName;
 
-        subjectList = new ArrayList<Subject>();
+        subjectList = new ArrayList<>();
     }
 
     public void addSubject(String name, int score){
