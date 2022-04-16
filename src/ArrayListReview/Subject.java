@@ -1,18 +1,24 @@
 package ArrayListReview;
 
 public class Subject {
-    private String subjectName;
-    int score;
+   private String name;
+   private int score;
 
-    public Subject(String subjectName){
-        this.subjectName = subjectName;
+
+   public String getName(){
+       return name;
+   }
+
+   public int getScore(){
+       return score;
+   }
+    public void setName(String name){
+    this.name = name;
     }
 
-    public void getSubjectName(){
-        this.subjectName = subjectName;
-    }
-    public String setSubjectName(){
-        return subjectName;
+    public void setScore(int score){
+        this.score =score;
+
     }
 
 
