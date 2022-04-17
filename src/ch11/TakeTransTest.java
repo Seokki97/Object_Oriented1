@@ -2,8 +2,8 @@ package ch11;
 
 public class TakeTransTest {
     public static void main(String[] args) {
-        Customer StudentJ = new Sturent("James", 5000);
-        Customer StuedentT = new Student("Tomas", 10000);
+        Student studentJ = new Student("James", 5000);
+        Student studentT = new Student("Tomas", 10000);
 
         Bus bus100 = new Bus(100);
 
