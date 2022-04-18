@@ -13,13 +13,14 @@ public class Customer {
         bonusRatio = 0.01;
     }
     public int calcPrice(int price){
-        if(customerGrade == "SILVER") {
+        /*if(customerGrade == "SILVER") {
             bonusPoint += price * bonusRatio;
         }
         else if(customerGrade == "VIP"){
             bonusRatio = 0.05;
             bonusPoint += price * bonusRatio;
-        }
+        } 이렇게 해도 되는데, 이러면 조건이 늘어날수록 효율성이 떨어진다.*/
+        bonusPoint += price * bonusRatio;
         return price;
     }
     public int getCustomerId(){
