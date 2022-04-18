@@ -8,10 +8,14 @@ public class Customer {
     int bonusPoint;
     double bonusRatio;
 
-    public Customer(){
+   /* public Customer(){
         customerGrade = "SILVER";
         bonusRatio = 0.01;
         System.out.println("Customer() call");
+    }*/
+    public Customer(int customerId, String customerName){
+        this.customerId = customerId;
+        this.customerName = customerName;
     }
     public int calcPrice(int price){
         /*if(customerGrade == "SILVER") {
