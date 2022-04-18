@@ -13,7 +13,13 @@ public class Customer {
         bonusRatio = 0.01;
     }
     public int calcPrice(int price){
-        bonusPoint +=price * bonusRatio;
+        if(customerGrade == "SILVER") {
+            bonusPoint += price * bonusRatio;
+        }
+        else if(customerGrade == "VIP"){
+            bonusRatio = 0.05;
+            bonusPoint += price * bonusRatio;
+        }
         return price;
     }
     public int getCustomerId(){

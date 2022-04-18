@@ -17,7 +17,7 @@ public class CustomerTest {
         siYoung.setCustomerId(1002);
         siYoung.setCustomerName("이시영");
 
-        siYoung.vipCalcPrice(120000);
+        siYoung.calcPrice(120000);
         System.out.println(siYoung.showCustomerInfo());
         System.out.println(siYoung.vipPrice);
 
