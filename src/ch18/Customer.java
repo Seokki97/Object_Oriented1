@@ -3,7 +3,7 @@ package ch18;
 public class Customer {
 
     protected int customerId;
-    protected String customerName;
+    protected String customerName; //protect는 하위 클래스에선 접근 가능하기 때문에 이렇게 설정
     protected String customerGrade;
     int bonusPoint;
     double bonusRatio;
