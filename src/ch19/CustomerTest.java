@@ -11,11 +11,11 @@ public class CustomerTest {
         junSeok.calcPrice(120000);
         System.out.println(junSeok.showCustomerInfo()); */
 
-        VipCustomer siYoung = new VipCustomer();
+        VipCustomer siYoung = new VipCustomer(10010, "이시영");
 
-        siYoung.setCustomerGrade("VIP");
-        siYoung.setCustomerId(1002);
-        siYoung.setCustomerName("이시영");
+       // siYoung.setCustomerGrade("VIP");
+        //siYoung.setCustomerId(1002);
+        //siYoung.setCustomerName("이시영");
 
         siYoung.vipCalcPrice(120000);
         System.out.println(siYoung.showCustomerInfo());
