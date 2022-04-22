@@ -22,11 +22,11 @@ public class AnimalTest {
         test.testDownCasting(animal21);
     }
 
-    public void testDownCasting(ArrayList<Animal> list){
+    public void testDownCasting(ArrayList<Animal> animal2){
 
-        for(int i = 0; i<list.size(); i++){
+        for(int i = 0; i<animal2.size(); i++){
 
-            Animal animal = list.get(i);
+            Animal animal = animal2.get(i);
 
             if( animal instanceof Human){
                 Human human = (Human)animal;
@@ -38,5 +38,6 @@ public class AnimalTest {
             }
             else{System.out.println("오류");}
         }
+
     }
 }
