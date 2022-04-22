@@ -7,5 +7,3 @@
 
 Customer vc = new VIPCustomer();  
 VipCustomer vCustomer = (VipCustomer)vc;
-
-반드시 원래타입으로 되돌려야 한다면 사용하는것
