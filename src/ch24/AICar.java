@@ -13,4 +13,9 @@ public class AICar extends Car{ //추상메서드를 오버라이드하지않으
         System.out.println("자율 주행을 멈춥니다");
 
     }
+
+    @Override
+    public void wiper(){
+            System.out.println("와이퍼를 작동합니다.");
+    }
 }
