@@ -16,3 +16,8 @@ public class Bus {
     System.out.println("버스의 승객은" +count + "명 입니ㄷ");
     }
 }
+/*
+public void take(int money) {  //승차
+    this.money += money;
+    passengerCount++;
+}*/

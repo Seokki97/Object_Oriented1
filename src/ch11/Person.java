@@ -17,6 +17,11 @@ public class Person {
         //강의 자료
 
 
+    /*public void takeBus(Bus bus) {
+        bus.take(1000);
+        this.money -= 1000;
+    }*/
+
 
 
 }
