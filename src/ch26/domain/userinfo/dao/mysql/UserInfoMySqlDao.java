@@ -10,6 +10,7 @@ public class UserInfoMySqlDao implements UserInfoDao {
         System.out.println("Insert into MySQL DB userID = " + userInfo.getUserID());
     }
 
+
     @Override
     public void updateUserInfo(UserInfo userInfo) {
         System.out.println("Update into MySQL DB userID" + userInfo.getUserID());

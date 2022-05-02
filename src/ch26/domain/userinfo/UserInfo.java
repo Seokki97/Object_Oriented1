@@ -16,7 +16,7 @@ public class UserInfo {
         return userName;
     }
 
-    public void setUserName(){
+    public void setUserName(String userName){
         this.userName =userName;
     }
 
@@ -24,7 +24,7 @@ public class UserInfo {
         return password;
     }
 
-    public void setPassword(){
+    public void setPassword(String password){
         this.password = password;
     }
 }
