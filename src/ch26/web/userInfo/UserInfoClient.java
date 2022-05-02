@@ -5,7 +5,7 @@ import ch26.domain.userinfo.dao.UserInfoDao;
 import ch26.domain.userinfo.dao.oracle.UserInfoOracleDao;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 
 import java.io.IOException;
 import java.util.Properties;
@@ -27,10 +27,10 @@ public class UserInfoClient {
         UserInfoDao userInfoDao = null;
 
         if( dbType.equals("ORACLE")){
-            userInfoDao = new UserInfoOracleDao() ;
+             userInfoDao = new UserInfoOracleDao() ;
         }
         else if(dbType.equals("MYSQL")){
-            UserInfoOracleDao userInfoDo = new UserInfoOracleDao();
+            userInfoDao = new UserInfoOracleDao();
 
         }
         else {
