@@ -15,5 +15,6 @@ public class CalculatorTest {
          calc.description();
          int[] arr = {1,2,3,4};
          System.out.println(Calc.total(arr));
+
     }
 }
