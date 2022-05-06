@@ -2,10 +2,17 @@ package ch29;
 
 public class MainBoardPlay {
     public static void main(String[] args) {
-        BeginnerLevel beginner = new BeginnerLevel();
-        beginner.showLevelMessage();
 
-        AdvancedLevel advance = new AdvancedLevel();
-        advance.showLevelMessage();
+        Player player = new Player();
+        player.play(1);
+
+        AdvancedLevel aLevel = new AdvancedLevel();
+        player.upgradeLevel(aLevel);
+        player.play(2);
+
+        SuperLevel sLevel = new SuperLevel();
+        player.upgradeLevel(sLevel);
+        player.play(3);
+
     }
 }
