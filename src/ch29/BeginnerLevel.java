@@ -1,6 +1,6 @@
 package ch29;
 
-public class BeginnerLevel implements PlayerLevel{
+public class BeginnerLevel extends Player implements PlayerLevel{
 
     @Override
     public void run() {
@@ -19,10 +19,8 @@ public class BeginnerLevel implements PlayerLevel{
 
     @Override
     public void showLevelMessage() {
-        System.out.println("***** 초급자 레벨입니다. ******");
-        run();
-        jump();
-        turn();
+        System.out.println("***** 중급자 레벨입니다. ******");
+        go(1);
     }
 
 }

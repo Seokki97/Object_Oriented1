@@ -9,6 +9,11 @@ public interface PlayerLevel {
     void showLevelMessage();
 
     default void go(int count){
+        run();
 
+        for(int i =0; i<count; i++){
+            jump();
+        }
+        turn();
     };
 }

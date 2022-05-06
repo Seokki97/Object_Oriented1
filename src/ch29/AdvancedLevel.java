@@ -1,6 +1,6 @@
 package ch29;
 
-public class AdvancedLevel implements PlayerLevel{
+public class AdvancedLevel extends Player implements PlayerLevel{
 
     @Override
     public void run() {
@@ -20,6 +20,7 @@ public class AdvancedLevel implements PlayerLevel{
     @Override
     public void showLevelMessage() {
         System.out.println("***** 중급자 레벨입니다. ******");
+        go(2);
     }
 
 }

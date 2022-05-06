@@ -1,6 +1,6 @@
 package ch29;
 
-public class SuperLevel implements PlayerLevel{
+public class SuperLevel extends Player implements PlayerLevel{
 
     @Override
     public void run() {
@@ -21,6 +21,7 @@ public class SuperLevel implements PlayerLevel{
     @Override
     public void showLevelMessage() {
         System.out.println("***** 고급자 레벨입니다. ******");
+        go(3);
     }
 
 }

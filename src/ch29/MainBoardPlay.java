@@ -4,5 +4,8 @@ public class MainBoardPlay {
     public static void main(String[] args) {
         BeginnerLevel beginner = new BeginnerLevel();
         beginner.showLevelMessage();
+
+        AdvancedLevel advance = new AdvancedLevel();
+        advance.showLevelMessage();
     }
 }
