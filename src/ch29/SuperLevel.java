@@ -20,7 +20,7 @@ public class SuperLevel implements PlayerLevel{
 
     @Override
     public void showLevelMessage() {
-
+        System.out.println("***** 고급자 레벨입니다. ******");
     }
 
 }
