@@ -20,7 +20,7 @@ public class ScedulerTest {
             scheduler = new LeastJob();
         }
         else if ( ch == 'P' || ch == 'p'){
-            scheduler == new PriorityAllocation();
+            scheduler = new PriorityAllocation();
         }
         else{
             System.out.println("지원되지 않는 기능입니다.");
