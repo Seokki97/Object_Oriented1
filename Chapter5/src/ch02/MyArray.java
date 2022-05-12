@@ -47,6 +47,6 @@ public class MyArray {
         intArr[position] = num;
         count++;
     }
-    // 0 1 2 3 4 5 6 7
+    // 0 1 2 3 4 5 6 7 4번째에 넣는다면 0 1 2 8 3 4 5 6 7
     // 1 2 3 4 5 6 7 8
 }
