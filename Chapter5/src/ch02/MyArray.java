@@ -18,9 +18,17 @@ public class MyArray {
         intArr = new int[size];
     }
 
-    public void insertElement(int position, int num){
+    public void addElement(int num){
+        if(count >= ARRAY_SIZE){
+            System.out.println("not enough memory");
+            return;
+        }
+        intArr[count++] = num;
+    }
 
-        int i ;
+    public void insertElement(int position, int num){ //중간에 넣는거거
+
+       int i ;
 
         if(count >= ARRAY_SIZE){
             System.out.println("ERROR");
@@ -33,8 +41,12 @@ public class MyArray {
         }
 
         for( i = count-1 ; i >= position ; i--){
-            intArr
+            intArr[i+1] = intArr[i];
         }
-    }
 
+        intArr[position] = num;
+        count++;
+    }
+    // 0 1 2 3 4 5 6 7
+    // 1 2 3 4 5 6 7 8
 }
