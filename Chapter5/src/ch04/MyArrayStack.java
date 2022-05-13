@@ -17,10 +17,11 @@ public class MyArrayStack {
     }
 
     public void push(int data){
-        if(top>=arrayStack.ARRAY_SIZE){
+        if(isFull()){
             System.out.println("error");
+            return;
         }
-        arrayStack.insertElement(top,data);
+        arrayStack.addElement(data);
         top++;
 
     }
@@ -31,8 +32,8 @@ public class MyArrayStack {
             System.out.println("error");
 
         }
-        arrayStack.removeElement(top);
-        top--;
+        arrayStack.removeElement(--top);
+
         return top;
     }
 
@@ -42,19 +43,22 @@ public class MyArrayStack {
     }
 
     public int getSize(){
-    return arrayStack.getSize();
+    return top;
     }
 
     public boolean isFull(){
-        System.out.println("isFull Error");
-    return true;
+        if(top == arrayStack.ARRAY_SIZE) {
+
+            return true;
+        }
+        else return false;
     }
 
     public boolean isEmpty(){
-        if(arrayStack.ARRAY_SIZE ==0 || top==0) {
-            System.out.println("isEmpty error");
+        if(top==0) {
+            return true;
         }
-     return true;
+     return false;
     }
 
     public void printAll(){
