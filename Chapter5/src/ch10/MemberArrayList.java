@@ -3,21 +3,25 @@ package ch10;
 import java.util.ArrayList;
 
 public class MemberArrayList {
-    ArrayList<String> arrayList ;
+    ArrayList<Member> memberArrayList ;
 
-
+    public MemberArrayList(){
+        memberArrayList = new ArrayList<>();
+    }
     public Member addMember(Member member){
-
-        return;
+        memberArrayList.add(member.);
+        return member;
     };
 
     public Member removeMember(Member member){
-
-        return
+        memberArrayList.remove(member);
+        return member;
     };
 
     public void showAllMember(){
-
+    for(int i =0; i < memberArrayList.size(); i++){
+        System.out.println(memberArrayList.get(i));
+    }
     };
 
 }
