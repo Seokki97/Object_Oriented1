@@ -15,7 +15,7 @@ public class MemberArrayListTest {
         memberArrayList.addMember(memberKang);
         memberArrayList.addMember(memberHong);
 
-        memberArrayList.showAllmember();
+        memberArrayList.showAllMember();
 
         memberArrayList.removeMember(memberHong.getMemberId());
         memberArrayList.showAllMember();
