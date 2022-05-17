@@ -26,4 +26,9 @@ public class Member {
         this.memberId = memberId;
     }
 
+    @Override
+    public String toString(){
+        return memberName +"회원님의 아이디는" + memberId +"입니다";
+    }
+
 }
