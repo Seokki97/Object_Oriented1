@@ -20,7 +20,7 @@ public class MemberArrayList {
             int tempId = member.getMemberId();
             if(tempId == memberId){
                 memberArrayList.remove(member);
-                return true
+                return true;
             }
         }
         return false;
