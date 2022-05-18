@@ -7,7 +7,7 @@ public class MemberTreeSet {
     private TreeSet<Member> treeSet ;
 
     public MemberTreeSet(){
-        treeSet = new TreeSet<Member>();
+        treeSet = new TreeSet<Member>(new Member());
     }
 
     public void addMember(Member member){
@@ -20,5 +20,6 @@ public class MemberTreeSet {
         }
         System.out.println();
     };
+
 
 }
