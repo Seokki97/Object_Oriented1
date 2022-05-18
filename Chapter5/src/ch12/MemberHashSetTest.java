@@ -10,6 +10,7 @@ public class MemberHashSetTest {
         Member memberKang = new Member(1003, "강감찬");
 
 
+
         memberHashSet.addMember(memberLee);
         memberHashSet.addMember(memberKim);
         memberHashSet.addMember(memberKang);
