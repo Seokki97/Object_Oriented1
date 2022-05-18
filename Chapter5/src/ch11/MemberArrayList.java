@@ -15,7 +15,7 @@ public class MemberArrayList {
 
     public boolean removeMember(int memberId){
         Iterator<Member> ir =  memberArrayList.iterator();
-        while (ir.hasNext()) {
+        while (ir.hasNext()) { //
             Member member = ir.next();
             int tempId = member.getMemberId();
             if(tempId == memberId){
