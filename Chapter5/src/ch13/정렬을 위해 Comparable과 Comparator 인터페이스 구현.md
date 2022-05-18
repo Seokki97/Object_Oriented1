@@ -16,7 +16,7 @@ class MyCompare implements Comparator<String>{
 
 	@Override
 	public int compare(String s1, String s2) {
-		return (s1.compareTo(s2)) *-1 ;
+		return (s1.compareTo(s2)) *-1 ;//원래값에 -1을 함으로써 내림차순으로 바꿈
 	}
 }
 
