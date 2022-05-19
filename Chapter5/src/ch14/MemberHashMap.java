@@ -5,18 +5,18 @@ import java.util.Iterator;
 
 public class MemberHashMap {
 
-    private HashMap<Integer, Member> hashMap;
+    private HashMap<Integer, Member> hashMap; //integer가 키 member가 value
 
     public MemberHashMap(){
         hashMap = new HashMap<>();
     }
 
     public void addMember(Member member){
-        hashMap.put(member.getMemberId(), member);
+        hashMap.put(member.getMemberId(), member); //put(key, value)
     }
 
     public boolean removeMember(int memberId){
-        if(hashMap.containsKey(memberId)){
+        if(hashMap.containsKey(memberId)){ //key값을 반환 containsValue도있음
             hashMap.remove(memberId);
             return true;
         }
@@ -26,7 +26,7 @@ public class MemberHashMap {
     }
 
     public void showAllMember(){
-        Iterator<Integer> ir = hashMap.keySet().iterator();
+        Iterator<Integer> ir = hashMap.keySet().iterator(); //keySet=모든 키값
         while (ir.hasNext()){
             int key = ir.next();
             Member member = hashMap.get(key);
