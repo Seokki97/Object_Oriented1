@@ -3,16 +3,18 @@ class Outer{
     static int sNum = 200;
 
 
-    Runnable getRunnable(int i ){
-        int num = 100;
+    Runnable getRunnable(final int i ){
+        final int num = 100;
 
-        class MyRunnable implements Runnable{
+        class MyRunnable implements Runnable{ //java.lang패키지에 선언되는 인터페이스 -> 쓰레드를 이용할때 필요함
 
             int localNum = 10;
             @Override
             public void run(){
                 //num = 200 ; >에러남 지역변수는 상수로 바뀜
                 //i = 100; >에러남, 매개변수 역시 지역변수처럼 상수로 바뀜
+                //안되는 이유는 getRunnble메서드 생성주기랑 클래스 생성주기가 달라서..
+                //그래서 final로 처리해야함
                 System.out.println("i=" +i);
                 System.out.println("num=" +num);
                 System.out.println("local num = " + localNum);
