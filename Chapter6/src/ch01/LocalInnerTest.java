@@ -1,3 +1,5 @@
+package ch01;
+
 class Outer{
     int outNum =100;
     static int sNum = 200;
@@ -20,7 +22,7 @@ class Outer{
                 System.out.println("local num = " + localNum);
 
                 System.out.println("outNum = " + outNum+"(외부 클래스 인스턴스 변수");
-                System.out.println("Outter.sNum" + Outer.sNum + "(외부ㅡㅋ래스 정적변수");
+                System.out.println("Outter.sNum" + ch01.Outer.sNum + "(외부ㅡㅋ래스 정적변수");
             }
         }*/
         //return new MyRunnable(); 클래스 이름을 리턴할때 빼고는 쓸일이 없음 그래서 선언부에 클래스이름대신
