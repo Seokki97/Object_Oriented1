@@ -18,7 +18,7 @@ public class TravelTest {
         customerList.add(customerHong);
 
         System.out.println("==고객 명단 추가된 순서대로 출력 ==");
-        customerList.stream().map(c ->c.getCustomerName()).forEach(s->System.out.println(s));
+        customerList.stream().map(c ->c.getCustomerName()).forEach(s->System.out.println(s)); //최종연산인 forEach를 꺼내고 그다음 조건을 정하는 중간연산을 꺼내는게 편리하다!
 
         int total = customerList.stream().mapToInt(c->c.getCost()).sum();
         System.out.println(" 총 여행 비용은:" +total + "입니다.");
