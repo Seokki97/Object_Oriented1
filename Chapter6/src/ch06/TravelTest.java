@@ -26,6 +26,7 @@ public class TravelTest {
 
         System.out.println("==20세 이상 고객 명단 정렬하여 출력 ==");
         customerList.stream().filter( s -> s.getCustomerAge() >=20).map(s->s.getCustomerName()).sorted().forEach(s ->System.out.println(s)); //마찬가지로, 최종연산전에 filter로 age를 거치고 map으로 이름을 가져온다음. 정렬을 하였다.
+        //즉 중간연산이 여러번 사용될 수 있다는 점 기억.!
 
     }
 }
