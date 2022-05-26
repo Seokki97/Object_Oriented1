@@ -28,9 +28,21 @@ public class StringCalculator {
         return a/b;
     }
 
+    public int calculator(int front , String middle, int back) {
+        int result=0;
+        if (middle == "+") return result =add(front, back);
+        else if (middle == "-") return result = subtract(front, back);
+        else if (middle == "*") return result = multiply(front, back);
+        else if (middle == "/") return result =divide(front, back);
+        else try{ System.out.println("입력값이 잘못되었습니다");} catch (Exception e){
+            System.out.println(e);
+            }
+        return result;
+    }
+
     public static void main(String[] args) {
         StringCalculator sc = new StringCalculator();
 
-        System.out.println(sc.divide(4,2));
+        System.out.println(sc.calculator(4,"f",3));
     }
 }
