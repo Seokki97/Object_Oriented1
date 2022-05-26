@@ -16,7 +16,7 @@ public class PasswordTest {
         System.out.println("문자열 길이 오류입니다");
         }
 
-        else if(password.matches("[a-zA-Z]+")){
+        else if(password.matches("[a-zA-Z]+")){ //a-z or A-Z 로만 되어있다.
             System.out.println("하나이상의 숫자나 특수문자가 들어가야합니다.");
         }
     }
