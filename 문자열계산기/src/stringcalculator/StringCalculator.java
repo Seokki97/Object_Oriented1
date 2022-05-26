@@ -65,10 +65,4 @@ public class StringCalculator {
         return result;
     }
 
-    public static void main(String[] args) {
-        StringCalculator sc = new StringCalculator();
-        String test ="1 + 2 + 4 + 6 / 3";
-        String[] testResult = sc.splitString(test);
-        System.out.println(sc.calcString(testResult));
-    }
 }
