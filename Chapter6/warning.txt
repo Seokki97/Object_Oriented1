@@ -1,0 +1,12 @@
+5월 26, 2022 8:36:04 오후 ch11.MyLogger log
+WARNING: test
+5월 26, 2022 8:36:04 오후 ch11.MyLogger log
+SEVERE: test
+5월 26, 2022 8:43:05 오후 ch11.MyLogger warning
+WARNING: null
+5월 26, 2022 8:43:05 오후 ch11.MyLogger warning
+WARNING: 공백 오류 
+5월 26, 2022 8:44:19 오후 ch11.MyLogger warning
+WARNING: null
+5월 26, 2022 8:44:19 오후 ch11.MyLogger warning
+WARNING: 공백 오류 
