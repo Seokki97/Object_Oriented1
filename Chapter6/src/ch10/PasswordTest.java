@@ -40,6 +40,12 @@ public class PasswordTest {
         }catch (PasswordException e){
             System.out.println(e);
         }
+        try{
+            pt.setPassword("djaso321");
+            System.out.println(pt.getPassword());
+        }catch(PasswordException e){
+            System.out.println(e);
+        }
 
 
     }
