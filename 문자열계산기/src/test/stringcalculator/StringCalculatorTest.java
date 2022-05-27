@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 class StringCalculatorTest {
 
     @Test
-    @DisplayName("더하기");
     void add() {
         StringCalculator stc = new StringCalculator();
         assertEquals(stc.add(1,2),3);
