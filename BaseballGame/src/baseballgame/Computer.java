@@ -1,5 +1,6 @@
 package baseballgame;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Computer {
@@ -14,11 +15,16 @@ public class Computer {
         this.setting = setting;
     }
 
-    public int[] randomBob(){
+    public String randomBob(){
         Random rand = new Random();
         for(int i = 0 ; i< 3; i++){
          setting[i] = rand.nextInt(9);
         }
-    return setting;
+    return Arrays.toString(setting);
+    }
+
+    public static void main(String[] args) {
+        Computer p1 = new Computer();
+        System.out.println(p1.randomBob());
     }
 }
