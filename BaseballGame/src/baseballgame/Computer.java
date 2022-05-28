@@ -23,8 +23,4 @@ public class Computer {
     return Arrays.toString(setting);
     }
 
-    public static void main(String[] args) {
-        Computer p1 = new Computer();
-        System.out.println(p1.randomBob());
-    }
 }
