@@ -44,4 +44,5 @@ public class Ball {
   public String toString(){
     return strike+"스트라이크" +ball +"볼" +nothing;
   }
+
 }
