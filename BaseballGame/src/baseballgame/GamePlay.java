@@ -19,14 +19,19 @@ public class GamePlay  {
         ball.makeNothing(p1.getInput(), com.getSetting());
         System.out.println(ball.toString());
     }
-
     public void doPlaying(){
+
         com.randomBob();
-        do{
+        System.out.println(com.randomBob());
+        int i = 0;
+        while(true){
             p1.stringToArray();
             play();
 
-        } while(ball.strike ==3);
+            if(ball.strike ==3){
+                break;
+            }
+        }
 
     }
 

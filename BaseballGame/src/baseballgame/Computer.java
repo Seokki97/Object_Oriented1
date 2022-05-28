@@ -1,7 +1,9 @@
 package baseballgame;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class Computer {
 
@@ -15,12 +17,17 @@ public class Computer {
         this.setting = setting;
     }
 
-    public String randomBob(){
+    public String randomBob() {
         Random rand = new Random();
-        for(int i = 0 ; i< 3; i++){
-         setting[i] = rand.nextInt(9);
+        for (int i = 0; i < 3; i++) {
+            setting[i] = rand.nextInt(9 -(1)+1)+(1);
+            for (int j = 0; j < i; j++) {
+                if (setting[i] == setting[j]) {
+                    i--;
+                }
+            }
         }
-    return Arrays.toString(setting);
+        return Arrays.toString(setting);
     }
 
 }
