@@ -6,7 +6,7 @@ public class Ball {
     int ball;
     String nothing = "낫싱";
 
-    public int makeStrike(int[] a1, int[] a2) {
+    public String makeStrike(int[] a1, int[] a2) {
         strike = 0;
         for (int i = 0; i < 3; i++) {
             if (a1[i] == a2[i]) {
@@ -14,10 +14,10 @@ public class Ball {
                 a1[i] = INITIAL_NUM;
             }
         }
-        return strike;
+        return strike + "스트라이크";
     }
 
-    public int makeBall(int[] a1, int[] a2) {
+    public String makeBall(int[] a1, int[] a2) {
         ball = 0;
         for (int i = 0; i < 3; i++) { //0 12 1 0 3 2 01
             for (int j = 0; j < 3; j++) {
@@ -26,7 +26,7 @@ public class Ball {
                 }
             }
         }
-        return ball;
+        return ball + "볼";
     }
 
     public String makeNothing(int[] a1, int[] a2) {
@@ -34,15 +34,11 @@ public class Ball {
             for (int j = 0; j < 3; j++) {
                 if (a1[i] != a2[i]) {
 
+                    return nothing;
                 }
             }
         }
-        return nothing;
-    }
-
-    @Override
-    public String toString() {
-        return strike + "스트라이크" + ball + "볼" + nothing;
+        return null;
     }
 
 }

@@ -6,16 +6,12 @@ import java.util.stream.Stream;
 
 public class Player {
 
-    private int[] input ;
+    private int[] ClientInput ;
     Scanner sc = new Scanner(System.in);
     public String inputNum;
 
     public int[] getInput() {
-        return input;
-    }
-
-    public void setInputNum(int[] input) {
-        this.input = input;
+        return ClientInput;
     }
 
     public void exception() throws IllegalArgumentException{
@@ -36,10 +32,10 @@ public class Player {
                 System.out.println(e);
             }
 
-        input = Stream.of(String.valueOf(inputNum).split(""))
+        ClientInput = Stream.of(String.valueOf(inputNum).split(""))
                 .mapToInt(Integer::parseInt).toArray();
 
-        return Arrays.toString(input);
+        return Arrays.toString(ClientInput);
     }
 
 }

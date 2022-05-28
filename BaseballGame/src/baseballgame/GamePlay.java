@@ -2,50 +2,56 @@ package baseballgame;
 
 import java.util.Scanner;
 
-public class GamePlay  {
-    //3스트라이크면 게임완료 아니면 계속
+public class GamePlay {
     Ball ball = new Ball();
     Computer com = new Computer();
     Player p1 = new Player();
 
     Scanner sc = new Scanner(System.in);
-    //게임완료
 
-    //재시작 OR 종료
+    @Override
+    public String toString() {
 
-    public void play(){
         ball.makeStrike(p1.getInput(), com.getSetting());
         ball.makeBall(p1.getInput(), com.getSetting());
         ball.makeNothing(p1.getInput(), com.getSetting());
-        System.out.println(ball.toString());
-    }
-    public void doPlaying(){
 
-        com.randomBob();
-        System.out.println(com.randomBob());
-        int i = 0;
-        while(true){
+        if (ball.strike == 0 && ball.ball == 0) {
+            return ball.nothing;
+        } else return ball.strike + "스트라이크" + ball.ball + "볼";
+    }
+
+    public void play() {
+        System.out.println(this);
+    }
+
+    public void doPlaying() {
+        com.setRandomInteger();
+
+        while (true) {
             p1.stringToArray();
             play();
 
-            if(ball.strike ==3){
+            if (ball.strike == 3) {
+                System.out.println(endMessage());
+                setPlaying();
                 break;
             }
         }
-
     }
 
-    public String endGame(){
+    public String endMessage() {
 
         return "3개의 숫자를 모두 맞히셨습니다! 게임 종료" +
                 "게임을 새로 시작하시려면 1, 종료하려면 2를 입력하세요";
     }
 
-    public void restartOrEnd() {
+    public void setPlaying() {
         if (sc.nextInt() == 1) {
             doPlaying();
-        } else {
-            System.out.println("끝");
+        } else if (sc.nextInt() == 2) {
+            System.exit(0);
         }
+
     }
 }
