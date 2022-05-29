@@ -4,9 +4,9 @@ public class BaseballTest {
 
     public static void main(String[] args) {
 
-        GamePlay gp = new GamePlay();
+        GamePlay player1 = new GamePlay();
         try {
-            gp.doPlaying();
+            player1.playGame();
         } catch (InputException e){
             System.out.println(e);
         }

@@ -5,23 +5,24 @@ import java.util.Random;
 
 public class Computer {
 
-    private int[] computerSetting = new int[Ball.SIZE];
+    private int[] randomSetting = new int[Ball.SIZE];
 
-    public int[] getSetting() {
-        return computerSetting;
+    public int[] getRandomSetting() {
+        return randomSetting;
     }
 
     public String setRandomInteger() {
         Random rand = new Random();
+
         for (int i = 0; i < 3; i++) {
-            computerSetting[i] = rand.nextInt(9 -(1)+1)+(1);
+            randomSetting[i] = rand.nextInt(9 - (1) + 1) + (1);
             for (int j = 0; j < i; j++) {
-                if (computerSetting[i] == computerSetting[j]) {
+                if (randomSetting[i] == randomSetting[j]) {
                     i--;
                 }
             }
         }
-        return Arrays.toString(computerSetting);
+        return Arrays.toString(randomSetting);
     }
 
 }
