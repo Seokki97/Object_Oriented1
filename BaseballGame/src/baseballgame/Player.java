@@ -15,6 +15,11 @@ public class Player {
         return intArray;
     }
 
+    public void convertType(){
+        list =Arrays.asList(clientInput.split(""));
+        numSet = new HashSet<>(list);
+    }
+
     public void inputException() throws IllegalArgumentException {
         if (clientInput.length() != 3) {
             throw new InputException("잘못입력");
@@ -22,8 +27,7 @@ public class Player {
         if (clientInput.matches("[1-9]")) {
             throw new InputException("잘못입력");
         }
-        list =Arrays.asList(clientInput.split(""));
-        numSet = new HashSet<>(list);
+        convertType();
         if(list.size() != numSet.size()){
             throw new InputException("잘못입력");
         }

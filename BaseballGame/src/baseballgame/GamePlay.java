@@ -21,7 +21,7 @@ public class GamePlay {
     }
 
     public void playGame() {
-        computer.setRandomInteger();
+        System.out.println(computer.setRandomInteger());
 
         while (true) {
             player.convertToArray();
