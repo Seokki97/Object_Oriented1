@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Computer {
 
-    private int[] computerSetting = new int[3];
+    private int[] computerSetting = new int[Ball.SIZE];
 
     public int[] getSetting() {
         return computerSetting;

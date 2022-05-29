@@ -9,19 +9,20 @@ public class GamePlay {
 
     Scanner sc = new Scanner(System.in);
 
+
     @Override
     public String toString() {
-
-        ball.makeStrike(p1.getInput(), com.getSetting());
-        ball.makeBall(p1.getInput(), com.getSetting());
-        ball.makeNothing(p1.getInput(), com.getSetting());
-
         if (ball.strike == 0 && ball.ball == 0) {
             return ball.nothing;
         } else return ball.strike + "스트라이크" + ball.ball + "볼";
     }
 
     public void play() {
+
+        ball.makeStrike(p1.getIntArray(), com.getSetting());
+        ball.makeBall(p1.getIntArray(), com.getSetting());
+        ball.makeNothing(p1.getIntArray(), com.getSetting());
+
         System.out.println(this);
     }
 

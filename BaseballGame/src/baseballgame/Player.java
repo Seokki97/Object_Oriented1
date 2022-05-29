@@ -1,41 +1,39 @@
 package baseballgame;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Player {
-
-    private int[] ClientInput ;
     Scanner sc = new Scanner(System.in);
-    public String inputNum;
+    private int[] intArray = new int[Ball.SIZE];
+    public String clientInput;
 
-    public int[] getInput() {
-        return ClientInput;
+    public int[] getIntArray() {
+        return intArray;
     }
 
-    public void exception() throws IllegalArgumentException{
-
-        if(inputNum == null || inputNum.length()>3) {
+    public void exception() throws IllegalArgumentException {
+        if (clientInput.length() != 3) {
             throw new InputException("잘못입력");
         }
-        if(inputNum.matches("[1-9]")){
+        if (clientInput.matches("[1-9]")) {
             throw new InputException("잘못입력");
         }
-    }
-
-    public String stringToArray()  {
-        inputNum = sc.nextLine();
-            try {
-                exception();
-            }catch (InputException e){
-                System.out.println(e);
+        for(int i =0; i<clientInput.length(); i++){
+        if(clientInput.indexOf(clientInput.charAt(i)) == i){
+            throw new InputException("잘못 입력");
             }
+        }
 
-        ClientInput = Stream.of(String.valueOf(inputNum).split(""))
+    }
+
+    public String stringToArray() {
+        clientInput = sc.nextLine();
+        exception();
+        intArray = Stream.of(String.valueOf(clientInput).split(""))
                 .mapToInt(Integer::parseInt).toArray();
 
-        return Arrays.toString(ClientInput);
+        return Arrays.toString(intArray);
     }
 
 }

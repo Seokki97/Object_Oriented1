@@ -5,8 +5,10 @@ public class BaseballTest {
     public static void main(String[] args) {
 
         GamePlay gp = new GamePlay();
-
-        gp.doPlaying();
-
+        try {
+            gp.doPlaying();
+        } catch (InputException e){
+            System.out.println(e);
+        }
     }
 }

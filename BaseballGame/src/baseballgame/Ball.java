@@ -2,6 +2,7 @@ package baseballgame;
 
 public class Ball {
     final int INITIAL_NUM = -1;
+    static final int SIZE = 3;
     int strike;
     int ball;
     String nothing = "낫싱";
