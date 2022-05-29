@@ -20,17 +20,22 @@ public class GamePlay {
         System.out.println(this);
     }
 
+    public boolean endCondition() {
+        if (ball.getStrike() == 3) {
+            System.out.println(endMessage());
+            setPlaying();
+            return false;
+        }
+        return true;
+    }
+
     public void playGame() {
         System.out.println(computer.setRandomInteger());
 
         while (true) {
             player.convertToArray();
             bringGame();
-            if (ball.getStrike() == 3) {
-                System.out.println(endMessage());
-                setPlaying();
-                break;
-            }
+            endCondition();
         }
     }
 
@@ -41,7 +46,8 @@ public class GamePlay {
     public void setPlaying() {
         if (sc.nextInt() == 1) {
             playGame();
-        } else if (sc.nextInt() == 2) {
+        }
+        if (sc.nextInt() == 2) {
             System.exit(0);
         }
     }
