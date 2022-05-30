@@ -1,7 +1,5 @@
 package baseballgame;
 
-import java.util.List;
-
 public class Ball {
     final int INITIAL_NUM = -1;
     static final int MAX_SIZE = 3;
