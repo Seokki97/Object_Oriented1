@@ -28,8 +28,8 @@ public class GamePlay {
     }
 
     public void bringGame() { // 객체 외부에서 호출하는 메서드가 아닌 내부에서 사용하는 메서드는 접근 제한자를 private으로 잠궈주어야 해요.
-        ball.makeStrike(player.getIntArray(), computer.getRandomSetting());
-        ball.makeBall(player.getIntArray(), computer.getRandomSetting());
+        //ball.makeStrike(player.getIntArray(), computer.getRandomSetting());
+        //ball.makeBall(player.getIntArray(), computer.getRandomSetting());
         System.out.println(this); // System.out.println(this)라고 작성된 부분이 스트라이크, 볼 결과를 출력한다는 것을 다른사람이 코드를 보고 직관적으로 이해 할 수 있을까요? 변경해보아요.
     }
     /*
