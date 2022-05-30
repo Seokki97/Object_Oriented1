@@ -1,7 +1,5 @@
 package baseballgame;
-
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class GamePlay {
     Ball ball;
@@ -27,36 +25,21 @@ public class GamePlay {
     }
 
     public void endGameCondition(){
-
-        if (ball.getStrike() == 3) {
             System.out.println(showEndMessage());
             restartOrEndGame();
-
-        }
     }
 
     public void playGame() {
         computer.setRandomInteger();
         System.out.println(computer.getComputerAnswerValue());
-        Scanner sc = new Scanner(System.in);
 
             do { // while문이 종료되는 조건에 true가 들어있군요. while (true)로 되어있는 이유가 있을까요?
                 player.setPersonValue(sc.nextInt());
                 determineStrikeOrBall();
-
                 ball.strikeMessage();
                 ball.ballMessage();
-            }
-                while (ball.getStrike() == 3);{
+            } while (ball.getStrike() < 3);
                     endGameCondition();
-                }
-
-            /*
-                if문 부분은 depth가 3이군요 수정해봅시다!
-                그리고, 55번째 줄을 보면 게임 종료 메세지를 출력해주고 있어요. 그렇다면 이 객체는 숫자야구 게임진행, 사용자 입력, 사용자에게 게임 결과 출력이라는 3가지 역할을 하는 걸까요?
-                위에서 이야기한것과 같이 하나의 객체는 하나의 역할만 해야해요.
-                노션 링크에 있는 영상을 보면서 mvc 패턴을 공부해봅시다.(프로그램 구현에서 mvc패턴을 적용하라는 것은 아님!)
-             */
     }
 
     private String showEndMessage() {
