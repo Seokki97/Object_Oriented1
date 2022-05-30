@@ -19,29 +19,33 @@ public class Player {
         return intArray;
     }
 
-    public void inputException() throws IllegalArgumentException {
+    public void inputLengthException() throws IllegalArgumentException{
         if (clientInput.length() != 3) {
             throw new InputException("입력한 수가 3자리가 아닙니다.");
         }
+    }
+
+    public void inputRangeException() throws IllegalArgumentException{
         if (clientInput.matches("[1-9]")) {
             throw new InputException("입력한 수의 범위가 1~9가 아닙니다.");
         }
+    }
+
+    public void inputDuplicateException() throws IllegalArgumentException{
         list =Arrays.asList(clientInput.split(""));
         numSet = new HashSet<>(list);
         if(list.size() != numSet.size()){
             throw new InputException("중복된 수를 입력하였습니다.");
         }
-
     }
-    /*
-        사용자 입력 예외에도 종류가 있죠!
-        또한, 위 메서드로는 예외가 어떤 예외인지 직관적으로 느껴지지 않아요.
-        메서드 분리를통해 어떠한 예외들인지 좀 더 쉽게 알수 있도록 바꿔보아요.
-    */
 
     public String convertToArray() {
         clientInput = sc.nextLine();
-        inputException();
+
+        inputLengthException();
+        inputRangeException();
+        inputDuplicateException();
+
         intArray = Stream.of(String.valueOf(clientInput).split(""))
                 .mapToInt(Integer::parseInt).toArray();
 
