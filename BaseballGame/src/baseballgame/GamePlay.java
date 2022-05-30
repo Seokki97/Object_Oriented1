@@ -1,6 +1,7 @@
 package baseballgame;
 
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class GamePlay {
     Ball ball;
@@ -28,9 +29,8 @@ public class GamePlay {
     }
 
     public void bringGame() { // 객체 외부에서 호출하는 메서드가 아닌 내부에서 사용하는 메서드는 접근 제한자를 private으로 잠궈주어야 해요.
-        //ball.makeStrike(player.getIntArray(), computer.getRandomSetting());
-        //ball.makeBall(player.getIntArray(), computer.getRandomSetting());
-        System.out.println(this); // System.out.println(this)라고 작성된 부분이 스트라이크, 볼 결과를 출력한다는 것을 다른사람이 코드를 보고 직관적으로 이해 할 수 있을까요? 변경해보아요.
+        ball.makeStrike(player, computer);
+        ball.makeBall(player, computer);
     }
     /*
         bringGame 메서드를 보면, ball 인스턴스가 파라미터로 player와 computer의 상태를 받아와서 스트라이크와 볼 결과를 계산하도록 해주고 있어요.
@@ -44,28 +44,32 @@ public class GamePlay {
             현실 세계에서 player, computer, ball은 어떤 관계를 가지고 있을까요?
             하지만, 객체지향세계는 현실세계의 확장이기 때문에 반드시, 현실세계와 같은 구조를 가져야 하는것은 아닙니다!
      */
+//152
+    public void input() {
+
+        int input = sc.nextInt();
+        int[] inputNum = Stream.of(String.valueOf(input).split(""))
+                .mapToInt(Integer ::parseInt).toArray();
+        for(int i =0 ; i< Ball.MAX_SIZE ; i++){
+            player.getPerson().add(i, inputNum[i]);
+
+        }
+    }
 
     public void playGame() {
         computer.setRandomInteger();
-        /*
-             이 메서드는 computer 인스턴스가 가지고 있을 정답 숫자 야구공들을 만드는 메서드로 보이네요.
-             그런데 setRandomInteger()이라는 네이밍은 다른 사람이 보았을때 메서드가 하는 일을 잘 표현하지 못하고 있어보여요.
-             메서드 네이밍은 항상어렵지만, "메서드가 하는 일이 무엇일까?", "어떤 이름이 다른사람이 봤을때 쉽게 이해될까?"
-             를 고민하면 좀더 좋은 네이밍을 할 수 있어요.
-             메서드가 하는 일을 잘 표현하는 네이밍으로 변경해보아요.
-        */
+        System.out.println(computer.getComputerAnswerValue());
+
         while (true) { // while문이 종료되는 조건에 true가 들어있군요. while (true)로 되어있는 이유가 있을까요?
-            player.convertToArray();
-            /*
-                일반적으로 메서드, 변수의 네이밍에 자료구조 이름(array, list 등)을 직접적으로 사용하지 않아요.
-                또한, convertToArray메서드가 하는 일은 player라는 객체가 해야할 일이라고 느껴지지 않네요.
-                이런경우, 객체의 책임과 역할이 잘못 분리된 경우가 있을 수 있는데요.
-                이 부분은 우리 프로그램의 구조를 변경하면서 고민해보아요.
-            */
-            bringGame(); // 이 메서드는 플레이어와 컴퓨터의 볼과 스트라이크를 계산하는 메서드군요. 그런데 bringGame()이라는 네이밍이 이러한 일을 잘표현하고있을까요? 네이밍을 변경해보아요.
+            input();
+            bringGame();
+            //weq();
+            // 이 메서드는 플레이어와 컴퓨터의 볼과 스트라이크를 계산하는 메서드군요. 그런데 bringGame()이라는 네이밍이 이러한 일을 잘표현하고있을까요? 네이밍을 변경해보아요.
+            ball.strikeMessage();
+            ball.ballMessage();
             if (ball.getStrike() == 3) {
-                System.out.println(endMessage());
-                setPlaying(); // 이 메서드는 게임을 더 진행 할지 종료할지를 사용자에게 입력받고 판단하는 메서드군요. 그런데 setPlaying()이라는 네이밍이 이러한 일을 잘 표현하고있을까요?
+                System.out.println(showEndMessage());
+                restartOrEndGame(); // 이 메서드는 게임을 더 진행 할지 종료할지를 사용자에게 입력받고 판단하는 메서드군요. 그런데 setPlaying()이라는 네이밍이 이러한 일을 잘 표현하고있을까요?
                 break;
             }
             /*
@@ -76,35 +80,18 @@ public class GamePlay {
              */
         }
     }
-    /*
-        playGame()에 bringGame()메서드와 setPlaying()메서드가 포함되어 있어요.
-        보통 코드를 작성할때, 특정 메서드의 내부에서 사용되는 메서드들은 특정 메서드의 아래에 위치시켜요.
-        코드를 위에서 아래로 읽기 때문이죠. 노션파일에 첨부한 자바 코드 컨벤션을 공부해봅시다.
-     */
 
-    public String endMessage() {
+    private String showEndMessage() {
         return "3개의 숫자를 모두 맞히셨습니다! 게임 종료" + "게임을 새로 시작하시려면 1, 종료하려면 2를 입력하세요";
         // 이 메서드는 사용자에게 게임 결과를 출력하는 일을 하죠. 과연 숫자야구 게임 진행의 역할을 하는 GamePlay가 해야할 일일까요?
         // 또한 객체 외부에서 호출하는 메서드가 아닌 내부에서 사용하는 메서드는 접근 제한자를 private으로 잠궈주어야 해요.
     }
 
-    public void setPlaying() {
+    public void restartOrEndGame() {
         if (sc.nextInt() == 1) { // if문 안의 조건식을 보면 사용자 입력이 1이면 게임을 다시시작한다는 것을 나타내 주는데요. 이 조건식을 다른사람이 본다면 직관적으로 이해 할 수 있을까요? 직관적으로 이애하기 쉽도록 변경해봅시다.
             playGame();
         } else if (sc.nextInt() == 2) { // 위와 같아요.
             System.exit(0);
         }
     }
-
-    @Override
-    public String toString() {
-        if (ball.getStrike() == 0 && ball.getBall() == 0) {
-            return "낫싱";
-        } else {
-            return ball.getStrike() + "스트라이크" + ball.getBall() + "볼";
-        }
-    }
-    // 일반적으로 toString()은 디버그를 통해 코드의 문제점을 찾아 낼때 사용해요.
-    // 하지만 현재는 결과를 출력하기 위한 용도로 사용하고 있어요.
-    // 이를 변경해볼까요? 프로그램 구조를 변경하면서 바뀔 것 같네요. 노션 링크의 mvc 패턴에 대해서 공부해보아요. (mvc 패턴으로 구현하라는 것은 아님)
 }

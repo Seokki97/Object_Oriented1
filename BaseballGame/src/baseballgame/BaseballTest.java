@@ -9,7 +9,7 @@ public class BaseballTest {
 
     public static void main(String[] args) {
         // 이 부분에 공백을 둔 이유가 무엇일까요?
-        GamePlay player1 = new GamePlay();
+        GamePlay PlayingGame = new GamePlay();
         /*
             player1 이라는 네이밍이 GamePlay라는 객체를 잘 설명하는 인스턴스명일까요?
             다른 이름으로 바꿔 봅시다.
@@ -17,7 +17,7 @@ public class BaseballTest {
             맞지 않아요. 요구사항에 있는 입출력과 같은 입출력이 되도록 수정해봅시다.
          */
         try {
-            player1.playGame();
+            PlayingGame.playGame();
         } catch (InputException e){
             System.out.println(e);
         }

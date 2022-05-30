@@ -16,7 +16,7 @@ public class Ball {
         for (int i = 0; i < MAX_SIZE; i++) {
             if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(i)) {
                 strike++;
-                player.getPerson().add(i,INITIAL_NUM);
+                player.getPerson().set(i,INITIAL_NUM);
             }
         }
         return strike;
@@ -24,6 +24,16 @@ public class Ball {
     /*
         for문의 depth가 3이예요. 변경해봅시다.
        */
+    public void strikeMessage(){
+        if(strike>0) {
+            System.out.print(strike + "스트라이크");
+        }
+    }
+    public void ballMessage(){
+        if(ball>0) {
+            System.out.print(ball + "볼");
+        }
+    }
 
     public int makeBall(Player player, Computer computer) {
         ball = 0;
