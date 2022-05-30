@@ -6,11 +6,17 @@ import java.util.stream.Stream;
 public class Player {
     private List<Integer> person = new ArrayList<>();
 
-    private Set<Integer> numSet ; // 일반적으로 자료구조의 이름을 변수, 함수명에 직접 사용하지 않아요 동시에 numSet라는 이름이 무슨일을 하는지 잘 표현하고 있을까요? 변경해보아요.
-    /*
-        변수들의 접근 제한자가 각각 다르게 되어있어요! 이러면 어떤 문제가 있을까요?
-        변경해보아요.
-     */
+    private Set<Integer> numSet ;
+
+    public void setPersonValue(int input) {
+
+        int[] inputNum = Stream.of(String.valueOf(input).split(""))
+                .mapToInt(Integer::parseInt).toArray();
+        for (int i = 0; i < Ball.MAX_SIZE; i++) {
+            getPerson().add(i, inputNum[i]);
+
+        }
+    }
 
     public void inputLengthException() throws IllegalArgumentException{
         if (person.size() != 3) {

@@ -54,11 +54,11 @@ public class Ball {
 
      */
 
-    public int getStrike() { // 일반적으로 getter는 클래스의 제일 하단에 작성해요. (오버라이드한 메서드보다는 상단에 작성합니다!)
+    public int getStrike() {
         return strike;
     }
 
-    public int getBall() { // 일반적으로 getter는 클래스의 제일 하단에 작성해요. (오버라이드한 메서드보다는 상단에 작성합니다!)
+    public int getBall() {
         return ball;
     }
 
