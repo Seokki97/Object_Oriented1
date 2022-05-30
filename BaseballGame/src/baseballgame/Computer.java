@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Computer {
-
-    private int[] randomSetting = new int[Ball.SIZE]; //Ball.SIZE는 Ball 객체의 상태이죠. 다른 객체의 상태를 직접 가져와 사용하면 어떤 문제가 있을수 있을까요?
+    final int MAX_LENGTH =3;
+    private int[] randomSetting = new int[MAX_LENGTH]; //Ball.SIZE는 Ball 객체의 상태이죠. 다른 객체의 상태를 직접 가져와 사용하면 어떤 문제가 있을수 있을까요?
     /*
         배열보다는 Collection Api를 사용해볼까요?
         그리고 randomSetting이라는 네이밍은 Computer가 가지고 있는 정답 난수들이라는것을 잘 표현 해줄까요?
@@ -18,10 +18,10 @@ public class Computer {
     }
 
     public String setRandomInteger() {
-        Random rand = new Random(); //rand라는 네이밍과 같이 줄임말을 사용하는것은 지양하는 것이 좋아요
+        Random randomNum = new Random();
 
-        for (int i = 0; i < 3; i++) {  // for문 내부에서 쓰이는 0, 3, 9, 1 과 같이 메서드에서 사용되는 숫자들을 매직넘버라고 해요. 매직넘버는 우리가 코드를 이해하기 어렵게 하죠. 매직넘버를 상수로 변경해봅시다. 자바 상수에 대해 구글에 검색하여 찾아보아요.
-            randomSetting[i] = rand.nextInt(9 - (1) + 1) + (1);
+        for (int i = 0; i < MAX_LENGTH; i++) {  //자바 상수에 대해 구글에 검색하여 찾아보아요.
+            randomSetting[i] = randomNum.nextInt(9 - (1) + 1) + (1);
             for (int j = 0; j < i; j++) {
                 if (randomSetting[i] == randomSetting[j]) {
                     i--;

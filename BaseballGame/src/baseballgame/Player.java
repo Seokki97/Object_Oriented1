@@ -15,9 +15,6 @@ public class Player {
         변경해보아요.
      */
 
-    public int[] getIntArray() {
-        return intArray;
-    }
 
     public void inputLengthException() throws IllegalArgumentException{
         if (clientInput.length() != 3) {
@@ -54,4 +51,7 @@ public class Player {
     /*
         사용자 입력을 배열로 변경해주는 것이 게임 참가자인 Player의 책임이 맞을까요?
      */
+    public int[] getIntArray() {
+        return intArray;
+    }
 }
