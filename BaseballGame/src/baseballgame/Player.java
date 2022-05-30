@@ -5,7 +5,8 @@ import java.util.stream.Stream;
 
 public class Player {
     Scanner sc = new Scanner(System.in); // Player 객체도 사용자 입력을 받는 Scanner 객체를 상태로 가지고 있군요. GamePlay와 중복이 되고있어요. 동시에, Player는 게임 참가자라는 역할과 사용자 입력을 받는 역할 두가지 역할을 하고 있죠. 하나의 역할만 하도록 변경해보아요.
-    private int[] intArray = new int[Ball.SIZE];  //Ball.SIZE는 Ball 객체의 상태이죠. 다른 객체의 상태를 직접 가져와 사용하면 어떤 문제가 있을수 있을까요?
+    private int[] intArray = new int[Ball.SIZE];//Ball.SIZE는 Ball 객체의 상태이죠. 다른 객체의 상태를 직접 가져와 사용하면 어떤 문제가 있을수 있을까요?
+    private List<Integer> person = new ArrayList<>();
     public String clientInput; // sc에 작성한 피드백과 같아요.
 
     List<String> list ; // 일반적으로 자료구조의 이름을 변수, 함수명에 직접 사용하지 않아요 동시에 list라는 이름이 무슨일을 하는지 잘 표현하고 있을까요? 변경해보아요.
@@ -53,5 +54,9 @@ public class Player {
      */
     public int[] getIntArray() {
         return intArray;
+    }
+
+    public List<Integer> getPerson() {
+        return person;
     }
 }
