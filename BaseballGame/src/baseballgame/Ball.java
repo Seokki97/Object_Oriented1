@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Ball {
     final int INITIAL_NUM = -1;
-    static final int SIZE = 3;
+    static final int MAX_SIZE = 3;
     private int strike;
     private int ball;
     /*
@@ -15,7 +15,7 @@ public class Ball {
 
     public int makeStrike(Player player, Computer computer) {
         strike = 0;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < MAX_SIZE; i++) {
             if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(i)) {
                 strike++;
                 player.getPerson().add(i,INITIAL_NUM);
@@ -25,15 +25,13 @@ public class Ball {
     }
     /*
         for문의 depth가 3이예요. 변경해봅시다.
-        또한 매직넘버를 제거해봅시다.
-        그리고 현재 구조에서 Ball 객체는 스트라이크와 볼의 개수를 판단하는 역할을 하는 것으로 보이는데,
        */
 
-    public int makeBall(int[] playerNum, int[] computerNum) {
+    public int makeBall(Player player, Computer computer) {
         ball = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (playerNum[i] == computerNum[j]) {
+        for (int i = 0; i < MAX_SIZE; i++) {
+            for (int j = 0; j < MAX_SIZE; j++) {
+                if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(j)) {
                     ball++;
                 }
             }
