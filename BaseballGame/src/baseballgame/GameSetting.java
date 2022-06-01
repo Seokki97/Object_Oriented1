@@ -16,7 +16,6 @@ public class GameSetting {
      */
     public GameSetting() {
         ball = new Ball();
-        computer = new Computer();
         player = new Player();
     }
 
@@ -26,8 +25,10 @@ public class GameSetting {
     }
 
     public List<Integer> setComputerValue() {
-        computer.setRandomInteger();
+        computer = new Computer(); //여기서 초기화를 안시켜주면 계속 같은 난수만 생성되기 때문에
 
+        computer.setRandomInteger();
+        System.out.println(computer.getComputerAnswerValue().toString());
         return computer.getComputerAnswerValue();
     }
 
@@ -41,4 +42,6 @@ public class GameSetting {
         ball.ballMessage();
         ball.nothingMessage();
     }
+
+
 }

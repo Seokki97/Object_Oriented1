@@ -1,5 +1,8 @@
 package baseballgame;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Ball {
     final int INITIAL_NUM = -1;
     static final int MAX_SIZE = 3;
@@ -11,13 +14,17 @@ public class Ball {
         이러면 어떤문제가 있을까요?
         변경해봅시다. 또한, 객체의 캡슐화란 무엇일까요?
      */
+    public List<Integer> w(Player player, Computer computer){
+
+        return player.getPerson().stream().filter(p -> p.equals(computer.getComputerAnswerValue().get(0))).collect(Collectors.toList());
+    }
 
     public int makeStrike(Player player, Computer computer) {
         strike = 0;
-        for (int i = 0; i < MAX_SIZE; i++) {
+         for (int i = 0; i < MAX_SIZE; i++) {
             if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(i)) {
                 strike++;
-                player.getPerson().set(i,INITIAL_NUM);
+                player.getPerson().set(i, INITIAL_NUM);
             }
         }
         return strike;
@@ -45,18 +52,19 @@ public class Ball {
 
      */
     public void strikeMessage() {
-        if(strike >0) {
+        if (strike > 0) {
             System.out.print(strike + "스트라이크");
         }
     }
 
     public void ballMessage() {
-        if(ball > 0) {
+        if (ball > 0) {
             System.out.print(ball + "볼");
         }
     }
-    public void nothingMessage(){
-        if(strike == 0 && ball == 0){
+
+    public void nothingMessage() {
+        if (strike == 0 && ball == 0) {
             System.out.println("낫싱");
         }
     }
@@ -72,6 +80,7 @@ public class Ball {
     public void setBall(int ball) {
         this.ball = ball;
     }
+
 
 
 }

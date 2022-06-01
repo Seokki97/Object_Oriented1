@@ -1,8 +1,9 @@
 package baseballgame;
 
+import java.util.Collection;
 import java.util.Scanner;
 
-public class GamePlay extends GameSetting{
+public class GamePlay extends GameSetting {
 
     Scanner sc = new Scanner(System.in);
 
@@ -13,29 +14,27 @@ public class GamePlay extends GameSetting{
 
     public void playGame() {
         setComputerValue();
-
         while (ball.getStrike() < 3) {
             input();
-
             setPlayerValue();
-
             determineStrikeOrBall();
-
             showScoreMessage();
 
         }
     }
 
-        public void restartOrEndGame() {
+    public void restartOrEndGame() {
         String sda = sc.nextLine();
-            if (sda.equals("1")) {
-                ball.setStrike(0);
-                ball.setBall(0);
-                playGame();
-            }
-            if (sda.equals("2")) {
-                System.exit(0);
-            }
+        if (sda.equals("1")) {
+            computer.getComputerAnswerValue().clear();
+            System.out.println(computer.getComputerAnswerValue().toString());
+            ball.setStrike(0);
+            ball.setBall(0);
+            playGame();
+        }
+        if (sda.equals("2")) {
+            System.exit(0);
         }
     }
+}
 
