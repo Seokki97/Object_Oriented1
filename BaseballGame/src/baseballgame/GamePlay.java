@@ -3,7 +3,6 @@ package baseballgame;
 import java.util.Scanner;
 
 public class GamePlay extends GameSetting {
-
     Scanner playerInput = new Scanner(System.in);
 
     private void inputPlayerNum() {
@@ -19,7 +18,6 @@ public class GamePlay extends GameSetting {
             setPlayerValue();
             determineStrikeOrBall();
             showScoreMessage();
-
         }
     }
 
