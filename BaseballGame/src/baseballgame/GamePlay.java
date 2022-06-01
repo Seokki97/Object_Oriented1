@@ -29,6 +29,9 @@ public class GamePlay {
     public void input() {
         player.input = sc.nextLine();
         player.stringToList();
+        player.inputDuplicateException();
+        player.inputRangeException();
+        player.inputLengthException();
     }
 
     public void setComputerValue() {
