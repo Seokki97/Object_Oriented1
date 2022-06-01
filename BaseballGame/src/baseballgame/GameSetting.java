@@ -39,5 +39,6 @@ public class GameSetting {
     public void showScoreMessage(){
         ball.strikeMessage();
         ball.ballMessage();
+        ball.nothingMessage();
     }
 }

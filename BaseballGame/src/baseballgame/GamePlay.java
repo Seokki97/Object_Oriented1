@@ -27,10 +27,13 @@ public class GamePlay extends GameSetting{
     }
 
         public void restartOrEndGame() {
-            int input = sc.nextInt();
-            if (input == 1) { // if문 안의 조건식을 보면 사용자 입력이 1이면 게임을 다시시작한다는 것을 나타내 주는데요. 이 조건식을 다른사람이 본다면 직관적으로 이해 할 수 있을까요? 직관적으로 이애하기 쉽도록 변경해봅시다.
+        String sda = sc.nextLine();
+            if (sda.equals("1")) {
+                ball.setStrike(0);
+                ball.setBall(0);
                 playGame();
-            } else if (input == 2) { // 위와 같아요.
+            }
+            if (sda.equals("2")) {
                 System.exit(0);
             }
         }

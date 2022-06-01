@@ -26,7 +26,6 @@ public class Ball {
         for문의 depth가 3이예요. 변경해봅시다.
        */
 
-
     public int makeBall(Player player, Computer computer) {
         ball = 0;
         for (int i = 0; i < MAX_SIZE; i++) {
@@ -56,13 +55,23 @@ public class Ball {
             System.out.print(ball + "볼");
         }
     }
+    public void nothingMessage(){
+        if(strike == 0 && ball == 0){
+            System.out.println("낫싱");
+        }
+    }
 
     public int getStrike() {
         return strike;
     }
 
-    public int getBall() {
-        return ball;
+    public void setStrike(int strike) {
+        this.strike = strike;
     }
+
+    public void setBall(int ball) {
+        this.ball = ball;
+    }
+
 
 }
