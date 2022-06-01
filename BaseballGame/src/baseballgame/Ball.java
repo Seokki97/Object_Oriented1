@@ -15,11 +15,11 @@ public class Ball {
     public int makeStrike(Player player, Computer computer) {
         strike = 0;
         for (int i = 0; i < MAX_SIZE; i++) {
-            if (player.setPersonValue().get(i) == computer.setRandomInteger().get(i)) {
+            if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(i)) {
                 strike++;
-                player.setPersonValue().set(i,INITIAL_NUM);
+                player.getPerson().set(i,INITIAL_NUM);
             }
-        }System.out.println(strike);
+        }
         return strike;
     }
     /*
@@ -31,11 +31,11 @@ public class Ball {
         ball = 0;
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
-                if (player.setPersonValue().get(i) == computer.setRandomInteger().get(j)) {
+                if (player.getPerson().get(i) == computer.getComputerAnswerValue().get(j)) {
                     ball++;
                 }
             }
-        }System.out.println(ball);
+        }
         return ball;
     }
 
@@ -46,13 +46,13 @@ public class Ball {
 
      */
     public void strikeMessage() {
-        if (strike > 0) {
+        if(strike >0) {
             System.out.print(strike + "스트라이크");
         }
     }
 
     public void ballMessage() {
-        if (ball > 0) {
+        if(ball > 0) {
             System.out.print(ball + "볼");
         }
     }

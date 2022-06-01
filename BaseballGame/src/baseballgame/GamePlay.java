@@ -1,10 +1,13 @@
 package baseballgame;
+
 import java.util.Scanner;
 
 public class GamePlay {
     Ball ball;
     Computer computer;
     Player player;
+    Scanner sc = new Scanner(System.in);
+
     /*
 
         현재 객체의 필드(상태) 인스턴스들이 Default 접근 제한자로 되어있어요.
@@ -23,14 +26,46 @@ public class GamePlay {
         ball.makeBall(player, computer);
     }
 
-    public void playGame() {
+    public void input() {
+        player.input = sc.nextLine();
+        player.stringToList();
+    }
+
+    public void setComputerValue() {
         computer.setRandomInteger();
-        System.out.println(computer.getComputerAnswerValue().toString());
-            do {
-                determineStrikeOrBall();
-                ball.strikeMessage();
-                ball.ballMessage();
-            } while (ball.getStrike() < 3);
+    }
+
+    public void setPlayerValue(){
+        player.setPersonValue();
+    }
+
+    public void getValue() {
+        player.getPerson();
+        computer.getComputerAnswerValue();
+    }
+
+    public void message(){
+        ball.strikeMessage();
+        ball.ballMessage();
+    }
+    public void playGame() {
+        setComputerValue();
+        while (true) {
+            input();
+
+            setPlayerValue();
+
+            getValue();
+
+            determineStrikeOrBall();
+
+            message();
+
+            if (ball.getStrike() == 3) {
+                break;
+            }
+        }
+
     }
 
 }
