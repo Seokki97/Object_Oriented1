@@ -1,6 +1,4 @@
 package baseballgame;
-
-import java.util.Collection;
 import java.util.Scanner;
 
 public class GamePlay extends GameSetting {
@@ -27,7 +25,6 @@ public class GamePlay extends GameSetting {
         String sda = sc.nextLine();
         if (sda.equals("1")) {
             computer.getComputerAnswerValue().clear();
-            System.out.println(computer.getComputerAnswerValue().toString());
             ball.setStrike(0);
             ball.setBall(0);
             playGame();

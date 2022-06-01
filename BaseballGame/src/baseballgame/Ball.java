@@ -14,10 +14,6 @@ public class Ball {
         이러면 어떤문제가 있을까요?
         변경해봅시다. 또한, 객체의 캡슐화란 무엇일까요?
      */
-    public List<Integer> w(Player player, Computer computer){
-
-        return player.getPerson().stream().filter(p -> p.equals(computer.getComputerAnswerValue().get(0))).collect(Collectors.toList());
-    }
 
     public int makeStrike(Player player, Computer computer) {
         strike = 0;
@@ -45,12 +41,16 @@ public class Ball {
         return ball;
     }
 
-    /*
-        for문의 depth가 4예요. 변경해봅시다.
-        또한 매직넘버를 제거해봅시다.
-        그리고 현재 구조에서 Ball 객체는 스트라이크와 볼의 개수를 판단하는 역할을 하는 것으로 보이는데,
-
-     */
+   /* public long makeBall(Player player, Computer computer){
+       long ball =0;
+       for(int i=0; i<MAX_SIZE;i++) {
+           int finalI = i;
+           ball += player.getPerson().stream()
+                   .filter(p -> p.equals(computer.getComputerAnswerValue().get(finalI)))
+                   .collect(Collectors.counting());
+       }
+        return ball;
+    }*/
     public void strikeMessage() {
         if (strike > 0) {
             System.out.print(strike + "스트라이크");
@@ -59,7 +59,7 @@ public class Ball {
 
     public void ballMessage() {
         if (ball > 0) {
-            System.out.print(ball + "볼");
+            System.out.println(ball + "볼");
         }
     }
 
