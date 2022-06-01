@@ -11,11 +11,11 @@ public class BaseballApplication {
         GamePlay PlayingGame = new GamePlay();
         BaseballApplication b1 = new BaseballApplication();
 
-
-        PlayingGame.playGame();
-        System.out.println(b1.showEndMessage());
-        PlayingGame.restartOrEndGame();
-
+        while(true) {
+            PlayingGame.playGame();
+            System.out.println(b1.showEndMessage());
+            PlayingGame.restartOrEndGame();
+        }
 
         }
 }
