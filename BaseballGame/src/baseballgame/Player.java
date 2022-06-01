@@ -5,17 +5,20 @@ import java.util.stream.Stream;
 
 public class Player {
     private List<Integer> person = new ArrayList<>();
-
     private Set<Integer> numSet ;
+    String input;
+    int[] inputNum;
 
-    public void setPersonValue(int input) {
-
-        int[] inputNum = Stream.of(String.valueOf(input).split(""))
-                .mapToInt(Integer::parseInt).toArray();
+    private void StringToList(){
+        inputNum = Stream.of(String.valueOf(input).split(""))
+                .mapToInt(Integer::parseInt).toArray(); //[0,1,2]
+    }
+    public List<Integer> setPersonValue() {
+        StringToList();
         for (int i = 0; i < Ball.MAX_SIZE; i++) {
-            getPerson().add(i, inputNum[i]);
-
+            person.add(i, inputNum[i]);
         }
+        return person;
     }
 
     public void inputLengthException() throws IllegalArgumentException{
@@ -36,7 +39,6 @@ public class Player {
             throw new InputException("중복된 수를 입력하였습니다.");
         }
     }
-
 
     public List<Integer> getPerson() {
         return person;
