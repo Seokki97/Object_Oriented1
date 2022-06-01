@@ -7,12 +7,12 @@ public class GameSetting {
     protected Computer computer;
     protected Player player;
 
-    public GameSetting() {
+    protected GameSetting() {
         ball = new Ball();
         player = new Player();
     }
 
-    public void determineStrikeOrBall() { // 객체 외부에서 호출하는 메서드가 아닌 내부에서 사용하는 메서드는 접근 제한자를 private으로 잠궈주어야 해요.
+    public void determineStrikeOrBall() {
         ball.makeStrike(player, computer);
         ball.makeBall(player, computer);
     }
@@ -26,13 +26,13 @@ public class GameSetting {
 
     public List<Integer> setPlayerValue(){
         player.setPersonValue();
-        return player.getPerson();
+        return player.getPersonValue();
     }
 
     public void showScoreMessage(){
-        ball.strikeMessage();
-        ball.ballMessage();
-        ball.nothingMessage();
+        ball.showStrikeMessage();
+        ball.showBallMessage();
+        ball.showNothingMessage();
     }
 
 

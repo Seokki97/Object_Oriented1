@@ -4,13 +4,11 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class Player {
-    Scanner sc = new Scanner(System.in);
-    private List<Integer> person = new ArrayList<>();
-    private Set<Integer> numSet ;
-    String input;
+    private List<Integer> playerNum = new ArrayList<>();
+    private Set<Integer> findingDuplication ;
+
+    public String input;
     int[] inputNum;
-
-
 
     public int[] stringToList(){
         inputNum = Stream.of(String.valueOf(input).split(""))
@@ -18,32 +16,32 @@ public class Player {
         return inputNum;
     }
 
-    public void setPersonValue() {
-        for (int i = 0; i < Ball.MAX_SIZE; i++) {
-            person.add(i, inputNum[i]);
-        }
-    }
-
     public void inputLengthException() throws IllegalArgumentException{
-        if (person.size() != 3) {
+        if (input.length() != 3) {
             throw new InputException("입력한 수가 3자리가 아닙니다.");
         }
     }
 
     public void inputRangeException() throws IllegalArgumentException{
-        if (person.stream().allMatch(a -> a>9 || a < 0) ) {
+        if (playerNum.stream().allMatch(a -> a>9 || a < 0) ) {
             throw new InputException("입력한 수의 범위가 1~9가 아닙니다.");
         }
     }
 
     public void inputDuplicateException() throws IllegalArgumentException{
-        numSet = new HashSet<>(person);
-        if(person.size() != numSet.size()){
+        findingDuplication = new HashSet<>(playerNum);
+        if(playerNum.size() != findingDuplication.size()){
             throw new InputException("중복된 수를 입력하였습니다.");
         }
     }
 
-    public List<Integer> getPerson() {
-        return person;
+    public void setPersonValue() {
+        for (int i = 0; i < Ball.MAX_SIZE; i++) {
+            playerNum.add(i, inputNum[i]);
+        }
+    }
+
+    public List<Integer> getPersonValue() {
+        return playerNum;
     }
 }

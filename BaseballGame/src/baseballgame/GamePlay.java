@@ -1,19 +1,21 @@
 package baseballgame;
+
 import java.util.Scanner;
 
 public class GamePlay extends GameSetting {
 
-    Scanner sc = new Scanner(System.in);
+    Scanner playerInput = new Scanner(System.in);
 
-    public void input() {
-        player.input = sc.nextLine();
+    private void inputPlayerNum() {
+        player.input = playerInput.nextLine();
         player.stringToList();
     }
 
     public void playGame() {
         setComputerValue();
+
         while (ball.getStrike() < 3) {
-            input();
+            inputPlayerNum();
             setPlayerValue();
             determineStrikeOrBall();
             showScoreMessage();
@@ -22,14 +24,15 @@ public class GamePlay extends GameSetting {
     }
 
     public void restartOrEndGame() {
-        String sda = sc.nextLine();
-        if (sda.equals("1")) {
+        String playerInputToString = playerInput.nextLine();
+
+        if (playerInputToString.equals("1")) {
             computer.getComputerAnswerValue().clear();
             ball.setStrike(0);
             ball.setBall(0);
             playGame();
         }
-        if (sda.equals("2")) {
+        if (playerInputToString.equals("2")) {
             System.exit(0);
         }
     }
