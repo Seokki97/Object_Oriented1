@@ -1,5 +1,4 @@
 package baseballgame;
-import baseballgame.GamePlay;
 
 public class GameComplete {
 
