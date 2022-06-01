@@ -11,7 +11,7 @@ public class BaseballTest {
         Computer computer = new Computer();
 
         GameComplete gameComplete = new GameComplete();
-        player.input = sc.nextLine();
+
         player.setPersonValue();
 
         PlayingGame.playGame();

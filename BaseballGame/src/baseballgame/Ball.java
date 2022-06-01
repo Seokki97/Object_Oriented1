@@ -19,8 +19,7 @@ public class Ball {
                 strike++;
                 player.setPersonValue().set(i,INITIAL_NUM);
             }
-
-        }
+        }System.out.println(strike);
         return strike;
     }
     /*
@@ -36,7 +35,7 @@ public class Ball {
                     ball++;
                 }
             }
-        }
+        }System.out.println(ball);
         return ball;
     }
 

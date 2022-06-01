@@ -4,12 +4,14 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class Player {
+    Scanner sc = new Scanner(System.in);
     private List<Integer> person = new ArrayList<>();
     private Set<Integer> numSet ;
-    String input;
+
     int[] inputNum;
 
     private void StringToList(){
+        String input = sc.nextLine();
         inputNum = Stream.of(String.valueOf(input).split(""))
                 .mapToInt(Integer::parseInt).toArray(); //[0,1,2]
     }
@@ -18,6 +20,7 @@ public class Player {
         for (int i = 0; i < Ball.MAX_SIZE; i++) {
             person.add(i, inputNum[i]);
         }
+        System.out.println(person.toString());
         return person;
     }
 
