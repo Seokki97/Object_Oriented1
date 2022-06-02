@@ -8,20 +8,22 @@ public class GameSetting {
     protected Computer computer;
     protected Player player;
 
-    List<Integer> playerValue;
-    List<Integer> computerValue;
+    private List<Integer> playerValue;
+    private List<Integer> computerValue;
+
+    Scanner playerInput = new Scanner(System.in);
 
     protected GameSetting() {
         ball = new Ball();
         player = new Player();
     }
 
-    public List<Integer> copyplayerValue() {
+    private List<Integer> copyplayerValue() {
         playerValue = player.getPersonValue();
         return playerValue;
     }
 
-    public List<Integer> copyComputerValue() {
+    private List<Integer> copyComputerValue() {
         computerValue = computer.getComputerAnswerValue();
         return computerValue;
     }
@@ -44,8 +46,6 @@ public class GameSetting {
         player.setPersonValue();
         return player.getPersonValue();
     }
-
-    Scanner playerInput = new Scanner(System.in);
 
     protected void inputPlayerNum() {
         player.input = playerInput.nextLine();

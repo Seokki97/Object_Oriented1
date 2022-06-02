@@ -5,7 +5,6 @@ import java.util.stream.Stream;
 
 public class Player {
     private List<Integer> playerNum = new ArrayList<>();
-    private Set<Integer> findingDuplication;
 
     public String input;
     int[] inputNum;
@@ -29,8 +28,8 @@ public class Player {
     }
 
     public void inputDuplicationException() throws InputException {
-        List<Integer> asd = playerNum.stream().distinct().toList();
-        if (asd.size() != playerNum.size()) {
+        long comparing = Arrays.stream(inputNum).distinct().count();
+        if (comparing != inputNum.length) {
             throw new InputException("중복된 수를 입력하였습니다");
         }
     }
@@ -41,8 +40,8 @@ public class Player {
             playerNum.add(i, inputNum[i]);
             inputLengthException();
             inputRangeException();
-            inputDuplicationException();
         }
+        inputDuplicationException();
     }
 
     public List<Integer> getPersonValue() {
