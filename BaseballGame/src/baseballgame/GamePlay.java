@@ -1,6 +1,8 @@
 package baseballgame;
+
 class GamePlay {
     GameSetting gameSetting = new GameSetting();
+
     public void playGame() {
         gameSetting.setComputerValue();
         while (gameSetting.ball.getStrike() < 3) {
