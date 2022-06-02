@@ -8,10 +8,11 @@ public class BaseballApplication {
     public static void main(String[] args) {
         BaseballApplication b1 = new BaseballApplication();
         GameSetting playing = new GameSetting();
+        GamePlay gameplay = new GamePlay();
         while(true) {
-            playing.playGame();
+            gameplay.playGame();
             System.out.println(b1.showEndMessage());
-            playing.restartOrEndGame();
+            gameplay.restartOrEndGame();
         }
 
         }
