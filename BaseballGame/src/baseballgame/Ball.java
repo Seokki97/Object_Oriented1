@@ -1,26 +1,29 @@
 package baseballgame;
+
+import java.util.List;
+
 public class Ball {
     private final int INITIAL_NUM = -1;
     protected static final int MAX_SIZE = 3;
     private int strike;
     private int ball;
 
-    public int makeStrike(Player player, Computer computer) {
+    public int makeStrike(List<Integer> player, List<Integer> computer) {
         strike = 0;
          for (int i = 0; i < MAX_SIZE; i++) {
-            if (player.getPersonValue().get(i) == computer.getComputerAnswerValue().get(i)) {
+            if (player.get(i) == computer.get(i)) {
                 strike++;
-                player.getPersonValue().set(i, INITIAL_NUM);
+                player.set(i, INITIAL_NUM);
             }
         }
         return strike;
     }
 
-    public int makeBall(Player player, Computer computer) {
+    public int makeBall(List<Integer> player, List<Integer> computer) {
         ball = 0;
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
-                if (player.getPersonValue().get(i) == computer.getComputerAnswerValue().get(j)) {
+                if (player.get(i) == computer.get(j)) {
                     ball++;
                 }
             }
@@ -54,6 +57,11 @@ public class Ball {
         if (strike == 0 && ball == 0) {
             System.out.println("낫싱");
         }
+    }
+    public void showScoreMessage(){
+        showStrikeMessage();
+        showBallMessage();
+        showNothingMessage();
     }
 
     public int getStrike() {

@@ -6,13 +6,12 @@ public class BaseballApplication {
     }
 
     public static void main(String[] args) {
-        GamePlay PlayingGame = new GamePlay();
         BaseballApplication b1 = new BaseballApplication();
-
+        GameSetting playing = new GameSetting();
         while(true) {
-            PlayingGame.playGame();
+            playing.playGame();
             System.out.println(b1.showEndMessage());
-            PlayingGame.restartOrEndGame();
+            playing.restartOrEndGame();
         }
 
         }
