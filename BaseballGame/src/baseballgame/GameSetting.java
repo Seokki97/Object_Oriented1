@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GameSetting {
-    Ball ball;
+    protected Ball ball;
     protected Computer computer;
     protected Player player;
 
@@ -17,7 +17,7 @@ public class GameSetting {
     }
 
     public List<Integer> copyplayerValue() {
-        this.playerValue = player.getPersonValue();
+        playerValue = player.getPersonValue();
         return playerValue;
     }
 
@@ -36,7 +36,6 @@ public class GameSetting {
 
     public List<Integer> setComputerValue() {
         computer = new Computer(); //여기서 초기화를 안시켜주면 계속 같은 난수만 생성되기 때문에
-
         computer.setRandomInteger();
         return computer.getComputerAnswerValue();
     }
