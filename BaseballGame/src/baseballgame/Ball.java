@@ -1,46 +1,41 @@
 package baseballgame;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Ball {
     private final int INITIAL_NUM = -1;
     protected static final int MAX_SIZE = 3;
     private int strike;
-    private int ball;
+    private long ball;
+
+    private void divideMethodFromMakeStrike(List<Integer> player, List<Integer> computer, int i) {
+        if (player.get(i) == computer.get(i)) {
+            strike++;
+            player.set(i, INITIAL_NUM);
+        }
+    }
 
     public int makeStrike(List<Integer> player, List<Integer> computer) {
         strike = 0;
-        for (int i = 0; i < MAX_SIZE; i++) {
-            if (player.get(i) == computer.get(i)) {
-                strike++;
-                player.set(i, INITIAL_NUM);
-            }
+        int i;
+        for (i = 0; i < MAX_SIZE; i++) {
+            divideMethodFromMakeStrike(player, computer, i);
         }
         return strike;
     }
 
-    public int makeBall(List<Integer> player, List<Integer> computer) {
+    public long makeBall(List<Integer> player, List<Integer> computer) {
         ball = 0;
         for (int i = 0; i < MAX_SIZE; i++) {
-            for (int j = 0; j < MAX_SIZE; j++) {
-                if (player.get(i) == computer.get(j)) {
-                    ball++;
-                }
-            }
+            int finalI = i;
+            ball += player.stream()
+                    .filter(p -> p.equals(computer.get(finalI)))
+                    .collect(Collectors.counting());
         }
         return ball;
     }
 
-    /* public long makeBall(Player player, Computer computer){
-        long ball =0;
-        for(int i=0; i<MAX_SIZE;i++) {
-            int finalI = i;
-            ball += player.getPerson().stream()
-                    .filter(p -> p.equals(computer.getComputerAnswerValue().get(finalI)))
-                    .collect(Collectors.counting());
-        }
-         return ball;
-     }*/
     public void showStrikeMessage() {
         if (strike > 0) {
             System.out.print(strike + "스트라이크");
@@ -67,7 +62,7 @@ public class Ball {
         this.strike = strike;
     }
 
-    public void setBall(int ball) {
+    public void setBall(long ball) {
         this.ball = ball;
     }
 }

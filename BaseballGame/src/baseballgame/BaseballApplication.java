@@ -9,6 +9,5 @@ public class BaseballApplication {
             System.out.println(gameplay.showEndMessage());
             gameplay.restartOrEndGame();
         }
-
         }
 }
