@@ -10,7 +10,7 @@ public class Ball {
 
     public int makeStrike(List<Integer> player, List<Integer> computer) {
         strike = 0;
-         for (int i = 0; i < MAX_SIZE; i++) {
+        for (int i = 0; i < MAX_SIZE; i++) {
             if (player.get(i) == computer.get(i)) {
                 strike++;
                 player.set(i, INITIAL_NUM);
@@ -31,16 +31,16 @@ public class Ball {
         return ball;
     }
 
-   /* public long makeBall(Player player, Computer computer){
-       long ball =0;
-       for(int i=0; i<MAX_SIZE;i++) {
-           int finalI = i;
-           ball += player.getPerson().stream()
-                   .filter(p -> p.equals(computer.getComputerAnswerValue().get(finalI)))
-                   .collect(Collectors.counting());
-       }
-        return ball;
-    }*/
+    /* public long makeBall(Player player, Computer computer){
+        long ball =0;
+        for(int i=0; i<MAX_SIZE;i++) {
+            int finalI = i;
+            ball += player.getPerson().stream()
+                    .filter(p -> p.equals(computer.getComputerAnswerValue().get(finalI)))
+                    .collect(Collectors.counting());
+        }
+         return ball;
+     }*/
     public void showStrikeMessage() {
         if (strike > 0) {
             System.out.print(strike + "스트라이크");
@@ -58,11 +58,6 @@ public class Ball {
             System.out.println("낫싱");
         }
     }
-    public void showScoreMessage(){
-        showStrikeMessage();
-        showBallMessage();
-        showNothingMessage();
-    }
 
     public int getStrike() {
         return strike;
@@ -75,7 +70,4 @@ public class Ball {
     public void setBall(int ball) {
         this.ball = ball;
     }
-
-
-
 }
