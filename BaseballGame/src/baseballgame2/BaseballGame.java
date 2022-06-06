@@ -7,10 +7,6 @@ public class BaseballGame {
     public PlayerNumber playerNumbers;
 
     BaseballCalculator baseballCalculator = new BaseballCalculator();
-    public BaseballGame(List<Integer> playerNumber, List<Integer> computerNumber){
-        playerNumbers = new PlayerNumber(playerNumber);
-        randomNumbers = new RandomNumber(computerNumber);
-    }
 
     public int getStrikeCount(){
         return baseballCalculator.calculateStrike(playerNumbers,randomNumbers);
@@ -19,5 +15,36 @@ public class BaseballGame {
         return baseballCalculator.calculateBall(playerNumbers,randomNumbers);
     }
 
+    public void showStrikeAndBall(){
+        if(getStrikeCount()<3){
+            GameMessage.showScore(getStrikeCount(),getBallCount());
+        }
+    }
+    public void showNothingMessage(){
+        if(getStrikeCount() ==0 && getBallCount() ==0){
+            GameMessage.showNothing();
+        }
+    }
+    public boolean endGame(){
+        if(getStrikeCount() == 3){
+            GameMessage.showEndGameMessage();
+            GameMessage.showRetryMessage();
+            return false;
+        }
+        return true;
+
+    }
+
+    public void GamePlay(){
+        randomNumbers.makeRandomNumber();
+        while(endGame()){
+            playerNumbers.setPersonValue();
+
+            baseballCalculator.calculateStrike(playerNumbers,randomNumbers);
+            baseballCalculator.calculateBall(playerNumbers,randomNumbers);
+            showStrikeAndBall();
+            showNothingMessage();
+        }
+    }
 
 }

@@ -1,7 +1,7 @@
 package baseballgame2;
 
 public class GameMessage {
-    public static void showScore(int strike, int ball){
+    public static void showScore(int strike, long ball){
         System.out.println(strike +" 스트라이크"+ball+"볼");
     }
     public static void showNothing(){

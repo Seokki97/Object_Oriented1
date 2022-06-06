@@ -16,7 +16,7 @@ public class BaseballCalculator {
 
     private void divideMethodFromMakeStrike(PlayerNumber playerNumber, RandomNumber randomNumber, int i) {
         strike = 0;
-        if (playerNumber.setPersonValue().get(i) == randomNumber.makeRandomNumber().get(i)) {
+        if (playerNumber.setPersonValue().get(i) == randomNumber.getRandomNumber().get(i)) {
             strike++;
             playerNumber.setPersonValue().set(i, INITIAL_NUMBER);
         }
@@ -35,7 +35,7 @@ public class BaseballCalculator {
         for (int i = 0; i < BALL_MAX_SIZE; i++) {
             int finalI = i;
             ball += playerNumber.setPersonValue().stream()
-                    .filter(p -> p.equals(randomNumber.makeRandomNumber().get(finalI)))
+                    .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalI)))
                     .collect(Collectors.counting());
         }
         return ball;
