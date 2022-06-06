@@ -12,6 +12,9 @@ public class RandomNumber {
     private static final int MIN_RANDOM_NUMBER=1;
     public List<Integer> randomNumber ;
 
+    public RandomNumber(List<Integer> randomNumber){
+        this.randomNumber = randomNumber;
+    }
 
     public List<Integer> makeRandomNumber() {
         Random randomNum = new Random();

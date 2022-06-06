@@ -1,4 +1,4 @@
 package baseballgame2;
 
-public class Ball {
+public class Strike {
 }
