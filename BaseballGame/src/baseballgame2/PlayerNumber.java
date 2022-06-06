@@ -8,13 +8,12 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class PlayerNumber {
-    private int[] playerNumberToArray = new int[3];
+    private static final int MAX_BALL_SIZE =3;
+    private int[] playerNumberToArray = new int[MAX_BALL_SIZE];
     public List<Integer> playerNumber = new ArrayList<>();
 
-    Scanner sc = new Scanner(System.in);
 
-    private int[] changeStringToArray() {
-        String input = sc.nextLine();
+    private int[] changeStringToArray(String input) {
         playerNumberToArray = Stream.of(String.valueOf(input).split(""))
                 .mapToInt(Integer::parseInt).toArray();
         return playerNumberToArray;
