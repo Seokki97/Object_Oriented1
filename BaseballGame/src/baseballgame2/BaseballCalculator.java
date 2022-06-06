@@ -1,5 +1,6 @@
 package baseballgame2;
 
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,31 +10,32 @@ public class BaseballCalculator {
 
     int strike;
     int ball;
-    private void divideMethodFromMakeStrike(Player player, Computer computer, int i) {
+
+    private void divideMethodFromMakeStrike(List<Integer> player, List<Integer> computer, int i) {
         strike = 0;
-        if (player.playerNumber.get(i) == computer.computerNumber.get(i)) {
+        if (player.get(i) == computer.get(i)) {
             strike++;
-            player.playerNumber.set(i, INITIAL_NUMBER);
+            player.set(i, INITIAL_NUMBER);
         }
     }
-    public int calculateStrike(Player player, Computer computer) {
+    public int calculateStrike(PlayerNumber player, RandomNumber computer) {
         strike = 0;
         int i;
         for (i = 0; i < BALL_MAX_SIZE; i++) {
-            divideMethodFromMakeStrike(player, computer, i);
+            int finalI = i;
+            divideMethodFromMakeStrike(player.playerNumber, computer.computerNumber1, finalI);
         }
         return strike;
     }
 
-    public long calculateBall(Player player, Computer computer) {
+    public long calculateBall(PlayerNumber player, RandomNumber computer) {
         ball = 0;
         for (int i = 0; i < BALL_MAX_SIZE; i++) {
             int finalI = i;
             ball += player.playerNumber.stream()
-                    .filter(p -> p.equals(computer.computerNumber.get(finalI)))
+                    .filter(p -> p.equals(computer.computerNumber1.get(finalI)))
                     .collect(Collectors.counting());
         }
         return ball;
     }
-
 }
