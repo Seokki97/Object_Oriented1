@@ -1,9 +1,4 @@
 package baseballgame2;
-
-
-
-
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class BaseballCalculator {
@@ -14,7 +9,7 @@ public class BaseballCalculator {
     private long ball;
 
 
-    private void divideMethodFromMakeStrike(PlayerNumber playerNumber, RandomNumber randomNumber, int i) {
+    public void divideMethodFromMakeStrike(PlayerNumber playerNumber, RandomNumber randomNumber, int i) {
         strike = 0;
         if (playerNumber.setPersonValue().get(i) == randomNumber.getRandomNumber().get(i)) {
             strike++;
@@ -38,6 +33,13 @@ public class BaseballCalculator {
                     .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalI)))
                     .collect(Collectors.counting());
         }
+        return ball;
+    }
+
+    public int getStrikeCount(){
+        return strike;
+    }
+    public long getBallCount(){
         return ball;
     }
 

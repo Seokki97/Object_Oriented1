@@ -13,6 +13,5 @@ public class Input {
 
     public static String input(){
         return input;
-
     }
 }

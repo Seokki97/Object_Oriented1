@@ -1,13 +1,27 @@
-package baseballgame2;
-
-import java.util.Scanner;
+package baseballgame2;;
 
 public class GamePlay {
-    public static void main(String[] args) {
+    PlayerNumber player = new PlayerNumber();
+    RandomNumber computer = new RandomNumber();
 
-        Scanner sc = new Scanner(System.in);
-        BaseballGame baseballGame = new BaseballGame();
-        baseballGame.GamePlay();
+    BaseballCalculator baseballCalculator = new BaseballCalculator();
+    BaseballGame baseballGame = new BaseballGame();
+
+    public void playGames() {
+        computer.makeRandomNumber();
+
+        do {
+            Input.inputNumber();
+            System.out.println(computer.getRandomNumber());
+            player.changeStringToArray();
+            player.setPersonValue();
+
+            baseballCalculator.calculateStrike(player, computer);
+            baseballCalculator.calculateBall(player, computer);
+
+            baseballGame.showStrikeAndBall(baseballCalculator);
+            baseballGame.showNothingMessage(baseballCalculator);
+        } while (baseballGame.endGame(baseballCalculator));
     }
 
 

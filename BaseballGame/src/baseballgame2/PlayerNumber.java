@@ -12,12 +12,9 @@ public class PlayerNumber {
     private int[] playerNumberToArray = new int[MAX_BALL_SIZE];
     private List<Integer> playerNumber = new ArrayList<>();
 
-    public PlayerNumber(List<Integer> playerNumber){
-        this.playerNumber = playerNumber;
-    }
 
-    private int[] changeStringToArray(String input) {
-        playerNumberToArray = Stream.of(String.valueOf(input).split(""))
+    public int[] changeStringToArray() {
+        playerNumberToArray = Stream.of(String.valueOf(Input.input()).split(""))
                 .mapToInt(Integer::parseInt).toArray();
         return playerNumberToArray;
     }
@@ -28,5 +25,6 @@ public class PlayerNumber {
         }
         return playerNumber;
     }
+
     }
 
