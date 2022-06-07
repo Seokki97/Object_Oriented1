@@ -2,10 +2,15 @@ package baseballgame2;
 
 public class BaseballGame {
 
-    public void showStrikeAndBall(BaseballCalculator baseballCalculator){
-        if(baseballCalculator.getStrikeCount()<3){
-            GameMessage.showScore(baseballCalculator.getStrikeCount(), baseballCalculator.getBallCount());
-            baseballCalculator.initializeStrikeCount(0,0);
+    public void showStrike(BaseballCalculator baseballCalculator){
+        if(baseballCalculator.getStrikeCount()>0 && baseballCalculator.getStrikeCount()<3){
+            GameMessage.showStrikeScore(baseballCalculator.getStrikeCount());
+        }
+    }
+
+    public void showBall(BaseballCalculator baseballCalculator){
+        if(baseballCalculator.getBallCount()>0 && baseballCalculator.getBallCount()<3){
+          GameMessage.showballScore(baseballCalculator.getBallCount());
         }
     }
 

@@ -7,7 +7,9 @@ public class Input {
 
     public static String inputNumber(){
         Scanner scanner = new Scanner(System.in);
-        input = scanner.nextLine();
+        try {
+            input = scanner.nextLine();
+        } throw new IllegalArgumentException()
         return input;
     }
 

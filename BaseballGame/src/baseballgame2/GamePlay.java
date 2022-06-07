@@ -19,8 +19,12 @@ public class GamePlay {
             baseballCalculator.calculateStrike(player, computer);
             baseballCalculator.calculateBall(player, computer);
 
-            baseballGame.showStrikeAndBall(baseballCalculator);
+
             baseballGame.showNothingMessage(baseballCalculator);
+            baseballGame.showStrike(baseballCalculator);
+            baseballGame.showBall(baseballCalculator);
+            baseballCalculator.initializeStrikeCount(0);
+            baseballCalculator.initializeBallCount(0);
         } while (baseballGame.endGame(baseballCalculator));
 
         Input.inputNumber();
@@ -30,7 +34,8 @@ public class GamePlay {
 
     public void InputRetryOrEnd(){
         if(Input.showInput().equals("1")){
-            baseballCalculator.initializeStrikeCount(0,0);
+            baseballCalculator.initializeStrikeCount(0);
+            baseballCalculator.initializeBallCount(0);
             playGames();
         }
         if(Input.showInput().equals("2"))

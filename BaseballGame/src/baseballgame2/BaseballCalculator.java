@@ -1,11 +1,12 @@
 package baseballgame2;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class BaseballCalculator {
-    private final int BALL_MAX_SIZE =3;
-    private final int INITIAL_NUMBER =-1;
-    private final int INITIAL_COUNT=0;
+    private final int BALL_MAX_SIZE = 3;
+    private final int INITIAL_NUMBER = -1;
+    private final int INITIAL_COUNT = 0;
     private int strike;
     private long ball;
 
@@ -16,6 +17,7 @@ public class BaseballCalculator {
             playerNumber.set(i, INITIAL_NUMBER);
         }
     }
+
     public int calculateStrike(PlayerNumber playerNumber, RandomNumber randomNumber) {
         int i;
         for (i = 0; i < BALL_MAX_SIZE; i++) {
@@ -33,16 +35,21 @@ public class BaseballCalculator {
         }
         return ball;
     }
-    public void initializeStrikeCount(int strike, long ball){
-        this.strike=strike;
-        this.ball=ball;
+
+    public void initializeStrikeCount(int strike) {
+        this.strike = strike;
     }
 
-    public int getStrikeCount(){
+    public void initializeBallCount(long ball) {
+        this.ball = ball;
+    }
+
+    public int getStrikeCount() {
         return strike;
 
     }
-    public long getBallCount(){
+
+    public long getBallCount() {
         return ball;
     }
 
