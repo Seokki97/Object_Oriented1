@@ -5,6 +5,7 @@ public class BaseballGame {
     public void showStrikeAndBall(BaseballCalculator baseballCalculator){
         if(baseballCalculator.getStrikeCount()<3){
             GameMessage.showScore(baseballCalculator.getStrikeCount(), baseballCalculator.getBallCount());
+            baseballCalculator.initializeStrikeCount(0,0);
         }
     }
 

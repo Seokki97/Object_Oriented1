@@ -23,7 +23,18 @@ public class GamePlay {
             baseballGame.showNothingMessage(baseballCalculator);
         } while (baseballGame.endGame(baseballCalculator));
 
+        Input.inputNumber();
+        InputRetryOrEnd();
+
     }
 
+    public void InputRetryOrEnd(){
+        if(Input.showInput().equals("1")){
+            baseballCalculator.initializeStrikeCount(0,0);
+            playGames();
+        }
+        if(Input.showInput().equals("2"))
+        System.exit(0);
+        }
 
 }

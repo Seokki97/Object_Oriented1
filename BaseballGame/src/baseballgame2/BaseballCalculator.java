@@ -33,17 +33,16 @@ public class BaseballCalculator {
         }
         return ball;
     }
+    public void initializeStrikeCount(int strike, long ball){
+        this.strike=strike;
+        this.ball=ball;
+    }
 
     public int getStrikeCount(){
-        if(strike != 3) {
-            return strike = INITIAL_COUNT;
-        }
         return strike;
+
     }
     public long getBallCount(){
-        if(ball != 3){
-            return ball = INITIAL_COUNT;
-        }
         return ball;
     }
 
