@@ -14,7 +14,7 @@ public class PlayerNumber {
 
 
     public int[] changeStringToArray() {
-        playerNumberToArray = Stream.of(String.valueOf(Input.input()).split(""))
+        playerNumberToArray = Stream.of(String.valueOf(Input.showInput()).split(""))
                 .mapToInt(Integer::parseInt).toArray();
         return playerNumberToArray;
     }

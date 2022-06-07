@@ -10,17 +10,18 @@ public class RandomNumber {
     private static final int MAX_NUMBER_LENGTH = 3;
     private static final int MAX_RANDOM_NUMBER = 9;
     private static final int MIN_RANDOM_NUMBER = 1;
-    private List<Integer> randomNumber = new ArrayList<>();
+    private List<Integer> randomNumber = new ArrayList<>() ;
 
     public List<Integer> makeRandomNumber() {
         Random randomNum = new Random();
-        List<Integer> asd = new ArrayList<>();
+        List<Integer> duplicateNumbersRemove = new ArrayList<>();
 
-     while (asd.size() <MAX_NUMBER_LENGTH) {
-         asd.add(randomNum.nextInt(MAX_RANDOM_NUMBER - (MIN_RANDOM_NUMBER) + MIN_RANDOM_NUMBER) + (MIN_RANDOM_NUMBER));
-          asd.stream().distinct().toList();
-     }
-        randomNumber= asd;
+     while (duplicateNumbersRemove.size() < MAX_NUMBER_LENGTH) {
+         duplicateNumbersRemove.add(randomNum.nextInt(MAX_RANDOM_NUMBER - (MIN_RANDOM_NUMBER)
+                 + MIN_RANDOM_NUMBER) + (MIN_RANDOM_NUMBER));
+         duplicateNumbersRemove = new ArrayList<>(duplicateNumbersRemove.stream().distinct().toList());
+          randomNumber = duplicateNumbersRemove;
+         }
         return randomNumber;
     }
 

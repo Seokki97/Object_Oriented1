@@ -22,6 +22,7 @@ public class GamePlay {
             baseballGame.showStrikeAndBall(baseballCalculator);
             baseballGame.showNothingMessage(baseballCalculator);
         } while (baseballGame.endGame(baseballCalculator));
+
     }
 
 

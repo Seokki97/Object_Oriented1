@@ -11,7 +11,7 @@ public class Input {
         return input;
     }
 
-    public static String input(){
+    public static String showInput(){
         return input;
     }
 }
