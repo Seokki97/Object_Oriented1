@@ -25,6 +25,8 @@ public class PlayerNumber {
         }
         return playerNumber;
     }
-
+    public List<Integer> getplayerNumber(){
+        return playerNumber;
+    }
     }
 

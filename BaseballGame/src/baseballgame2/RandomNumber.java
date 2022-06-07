@@ -16,11 +16,11 @@ public class RandomNumber {
         Random randomNum = new Random();
         List<Integer> asd = new ArrayList<>();
 
-        do { //자바 상수에 대해 구글에 검색하여 찾아보아요.
-            asd.add(randomNum.nextInt(MAX_RANDOM_NUMBER - (MIN_RANDOM_NUMBER) + MIN_RANDOM_NUMBER) + (MIN_RANDOM_NUMBER));
-            asd.stream().distinct().toList();
-        } while (asd.size() < MAX_NUMBER_LENGTH);
-        randomNumber = asd;
+     while (asd.size() <MAX_NUMBER_LENGTH) {
+         asd.add(randomNum.nextInt(MAX_RANDOM_NUMBER - (MIN_RANDOM_NUMBER) + MIN_RANDOM_NUMBER) + (MIN_RANDOM_NUMBER));
+          asd.stream().distinct().toList();
+     }
+        randomNumber= asd;
         return randomNumber;
     }
 
