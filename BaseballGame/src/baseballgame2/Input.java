@@ -3,17 +3,16 @@ package baseballgame2;
 import java.util.Scanner;
 
 public class Input {
-    private static String input ;
+    private static String input;
 
-    public static String inputNumber(){
+    public static String inputNumber() {
         Scanner scanner = new Scanner(System.in);
-        try {
-            input = scanner.nextLine();
-        } throw new IllegalArgumentException()
+
+        input = scanner.nextLine();
         return input;
     }
 
-    public static String showInput(){
+    public static String showInput() {
         return input;
     }
 }
