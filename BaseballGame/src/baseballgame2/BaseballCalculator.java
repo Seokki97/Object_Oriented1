@@ -1,51 +1,47 @@
 package baseballgame2;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class BaseballCalculator {
-    private final int INITIAL_COUNT = 0;
-    private final int BALL_MAX_SIZE = 3;
-    private final int INITIAL_NUMBER = -1;
-
+    private static final int INITIALIZE_OF_BALLS_COUNT = 0;
+    private static final int BALL_MAX_SIZE = 3;
+    private static final int INITIAL_NUMBER = -1;
     private int strike;
     private long ball;
 
-
-    public void divideMethodFromMakeStrike(List<Integer> playerNumber, List<Integer> randomNumber, int i) {
-        if (playerNumber.get(i) == randomNumber.get(i)) {
+    public void divideMethodFromMakeStrike(List<Integer> playerNumber, List<Integer> randomNumber, int index) {
+        if (playerNumber.get(index) == randomNumber.get(index)) {
             strike++;
-            playerNumber.set(i, INITIAL_NUMBER);
+            playerNumber.set(index, INITIAL_NUMBER);
         }
     }
 
     public int calculateStrike(PlayerNumber playerNumber, RandomNumber randomNumber) {
         initializeStrike();
-        int i;
-        for (i = 0; i < BALL_MAX_SIZE; i++) {
-            divideMethodFromMakeStrike(playerNumber.getplayerNumber(), randomNumber.getRandomNumber(), i);
+        int index;
+        for (index = 0; index < BALL_MAX_SIZE; index++) {
+            divideMethodFromMakeStrike(playerNumber.getPlayerNumber(), randomNumber.getRandomNumber(), index);
         }
         return strike;
     }
 
     public long calculateBall(PlayerNumber playerNumber, RandomNumber randomNumber) {
         initializeBall();
-        for (int i = 0; i < BALL_MAX_SIZE; i++) {
-            int finalI = i;
-            ball += playerNumber.getplayerNumber().stream()
-                    .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalI))).count();
+        for (int index = 0; index < BALL_MAX_SIZE; index++) {
+            int finalindex = index;
+            ball += playerNumber.getPlayerNumber().stream()
+                    .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalindex))).count();
         }
-
         return ball;
     }
 
     public int initializeStrike() {
-        strike = INITIAL_COUNT;
+        strike = INITIALIZE_OF_BALLS_COUNT;
         return strike;
     }
 
     public long initializeBall() {
-        ball = 0;
+        ball = INITIALIZE_OF_BALLS_COUNT;
         return ball;
     }
 

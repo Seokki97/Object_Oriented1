@@ -1,27 +1,25 @@
 package baseballgame2;
 
-;
-
 public class GamePlay {
     PlayerNumber player = new PlayerNumber();
-    RandomNumber computer = new RandomNumber();
+    RandomNumber randomNumber = new RandomNumber();
 
     BaseballCalculator baseballCalculator = new BaseballCalculator();
-    BaseballGame baseballGame = new BaseballGame();
+    GameMessageCalculator baseballGame = new GameMessageCalculator();
 
     public void playGames() {
-        computer.makeRandomNumber();
+        randomNumber.makeRandomNumber();
 
         while (baseballGame.endGame(baseballCalculator)) {
             Input.inputNumber();
-            System.out.println(computer.getRandomNumber());
+            System.out.println(randomNumber.getRandomNumber());
 
             player.changeStringToArray();
             player.setPersonValue();
-            baseballCalculator.calculateStrike(player, computer);
-            baseballCalculator.calculateBall(player, computer);
+            baseballCalculator.calculateStrike(player, randomNumber);
+            baseballCalculator.calculateBall(player, randomNumber);
 
-            player.getplayerNumber().clear();
+            player.getPlayerNumber().clear();
 
             baseballGame.showNothingMessage(baseballCalculator);
             baseballGame.showStrike(baseballCalculator);
