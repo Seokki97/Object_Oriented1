@@ -1,4 +1,4 @@
-package baseballgame2;
+package baseballgame;
 
 public class GameMessageCalculator {
     private final int MAX_COUNT = 3;

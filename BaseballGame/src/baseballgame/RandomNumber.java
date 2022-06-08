@@ -1,6 +1,4 @@
-package baseballgame2;
-
-import baseballgame.Ball;
+package baseballgame;
 
 import java.util.ArrayList;
 import java.util.List;

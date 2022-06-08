@@ -1,4 +1,4 @@
-package baseballgame2;
+package baseballgame;
 
 public class GameMessage {
     public static void showStrikeScore(int strike) {

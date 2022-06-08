@@ -1,4 +1,4 @@
-package baseballgame2;
+package baseballgame;
 
 import java.util.List;
 
@@ -6,10 +6,11 @@ public class BaseballCalculator {
     private static final int INITIALIZE_OF_BALLS_COUNT = 0;
     private static final int BALL_MAX_SIZE = 3;
     private static final int INITIAL_NUMBER = -1;
+
     private int strike;
     private long ball;
 
-    public void divideMethodFromMakeStrike(List<Integer> playerNumber, List<Integer> randomNumber, int index) {
+    private void divideMethodFromMakeStrike(List<Integer> playerNumber, List<Integer> randomNumber, int index) {
         if (playerNumber.get(index) == randomNumber.get(index)) {
             strike++;
             playerNumber.set(index, INITIAL_NUMBER);
