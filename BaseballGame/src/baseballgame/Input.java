@@ -32,10 +32,11 @@ public class Input {
     public static String inputRetryOrEndNumber() {
         inputRetryOrEndNumber = scanner.nextLine();
 
-        if (inputPlayerNumber != RESTART_GAME || inputRetryOrEndNumber != END_GAME) {
-            throw new IllegalArgumentException("1또는 2가 아닌 다른 숫자를 입력하였습니다");
+        if (inputRetryOrEndNumber.equals(RESTART_GAME) || inputRetryOrEndNumber.equals(END_GAME)) {
+            return inputRetryOrEndNumber;
+        } else {
+            throw new IllegalArgumentException("입력된 숫자가 1 또는 2가 아닙니다");
         }
-        return inputRetryOrEndNumber;
     }
 
     public static String showRetryOrEndNumber() {

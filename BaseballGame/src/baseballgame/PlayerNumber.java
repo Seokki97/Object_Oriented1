@@ -16,7 +16,7 @@ public class PlayerNumber {
         return playerNumberToArray;
     }
 
-    public List<Integer> setPersonValue() {
+    public List<Integer> changeArrayToListPlayerNumber() {
         for (int index = MIN_BALL_SIZE; index < MAX_BALL_SIZE; index++) {
             playerNumber.add(index, playerNumberToArray[index]);
         }
