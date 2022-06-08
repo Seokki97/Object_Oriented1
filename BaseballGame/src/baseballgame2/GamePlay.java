@@ -22,8 +22,8 @@ public class GamePlay {
             player.getPlayerNumber().clear();
 
             baseballGame.showNothingMessage(baseballCalculator);
-            baseballGame.showStrike(baseballCalculator);
-            baseballGame.showBall(baseballCalculator);
+            baseballGame.showStrikeMessage(baseballCalculator);
+            baseballGame.showBallMessage(baseballCalculator);
         }
         Input.inputNumber();
         InputRetryOrEnd();

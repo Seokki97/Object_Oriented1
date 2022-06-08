@@ -4,13 +4,13 @@ public class GameMessageCalculator {
     private final int MAX_COUNT = 3;
     private final int MIN_COUNT = 0;
 
-    public void showStrike(BaseballCalculator baseballCalculator) {
+    public void showStrikeMessage(BaseballCalculator baseballCalculator) {
         if (baseballCalculator.getStrikeCount() > MIN_COUNT && baseballCalculator.getStrikeCount() < MAX_COUNT) {
             GameMessage.showStrikeScore(baseballCalculator.getStrikeCount());
         }
     }
 
-    public void showBall(BaseballCalculator baseballCalculator) {
+    public void showBallMessage(BaseballCalculator baseballCalculator) {
         if (baseballCalculator.getBallCount() > MIN_COUNT && baseballCalculator.getBallCount() < MAX_COUNT) {
             GameMessage.showBallScore(baseballCalculator.getBallCount());
         }
