@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BaseballCalculator {
+    private final int INITIAL_COUNT = 0;
     private final int BALL_MAX_SIZE = 3;
     private final int INITIAL_NUMBER = -1;
-    private final int INITIAL_COUNT = 0;
+
     private int strike;
     private long ball;
 
@@ -19,6 +20,7 @@ public class BaseballCalculator {
     }
 
     public int calculateStrike(PlayerNumber playerNumber, RandomNumber randomNumber) {
+        initializeStrike();
         int i;
         for (i = 0; i < BALL_MAX_SIZE; i++) {
             divideMethodFromMakeStrike(playerNumber.getplayerNumber(), randomNumber.getRandomNumber(), i);
@@ -27,26 +29,28 @@ public class BaseballCalculator {
     }
 
     public long calculateBall(PlayerNumber playerNumber, RandomNumber randomNumber) {
+        initializeBall();
         for (int i = 0; i < BALL_MAX_SIZE; i++) {
             int finalI = i;
             ball += playerNumber.getplayerNumber().stream()
-                    .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalI)))
-                    .collect(Collectors.counting());
+                    .filter(p -> p.equals(randomNumber.getRandomNumber().get(finalI))).count();
         }
+
         return ball;
     }
 
-    public void initializeStrikeCount(int strike) {
-        this.strike = strike;
+    public int initializeStrike() {
+        strike = INITIAL_COUNT;
+        return strike;
     }
 
-    public void initializeBallCount(long ball) {
-        this.ball = ball;
+    public long initializeBall() {
+        ball = 0;
+        return ball;
     }
 
     public int getStrikeCount() {
         return strike;
-
     }
 
     public long getBallCount() {
