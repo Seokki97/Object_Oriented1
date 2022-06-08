@@ -1,6 +1,10 @@
 package baseballgame2;
 
 public class GamePlay {
+    private static final String RESTART_GAME = "1";
+    private static final String END_GAME = "2";
+    private static final int SYSTEM_OUT = 0;
+
     PlayerNumber player = new PlayerNumber();
     RandomNumber randomNumber = new RandomNumber();
 
@@ -30,12 +34,12 @@ public class GamePlay {
     }
 
     public void InputRetryOrEnd() {
-        if (Input.showInput().equals("1")) {
+        if (Input.showInput().equals(RESTART_GAME)) {
             baseballCalculator.initializeStrike();
             baseballCalculator.initializeBall();
             playGames();
         }
-        if (Input.showInput().equals("2"))
-            System.exit(0);
+        if (Input.showInput().equals(END_GAME))
+            System.exit(SYSTEM_OUT);
     }
 }
