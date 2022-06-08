@@ -1,4 +1,5 @@
 package baseballgame2;
+
 import baseballgame.Ball;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class PlayerNumber {
-    private static final int MAX_BALL_SIZE =3;
+    private static final int MAX_BALL_SIZE = 3;
     private int[] playerNumberToArray = new int[MAX_BALL_SIZE];
     private List<Integer> playerNumber = new ArrayList<>();
 
@@ -25,8 +26,9 @@ public class PlayerNumber {
         }
         return playerNumber;
     }
-    public List<Integer> getplayerNumber(){
+
+    public List<Integer> getplayerNumber() {
         return playerNumber;
     }
-    }
+}
 
