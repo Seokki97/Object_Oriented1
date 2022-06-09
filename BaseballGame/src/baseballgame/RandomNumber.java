@@ -8,8 +8,11 @@ public class RandomNumber {
     private static final int MAX_NUMBER_LENGTH = 3;
     private static final int MAX_RANDOM_NUMBER = 9;
     private static final int MIN_RANDOM_NUMBER = 1;
-    private List<Integer> randomNumber = new ArrayList<>();
+    private final List<Integer> randomNumber ;
 
+    public RandomNumber(){
+        randomNumber = new ArrayList<>(makeRandomNumber());
+    }
     public List<Integer> makeRandomNumber() {
         Random randomNum = new Random();
         List<Integer> duplicateNumbersRemove = new ArrayList<>();
@@ -18,9 +21,8 @@ public class RandomNumber {
             duplicateNumbersRemove.add(randomNum.nextInt(MAX_RANDOM_NUMBER - (MIN_RANDOM_NUMBER)
                     + MIN_RANDOM_NUMBER) + (MIN_RANDOM_NUMBER));
             duplicateNumbersRemove = new ArrayList<>(duplicateNumbersRemove.stream().distinct().toList());
-            randomNumber = duplicateNumbersRemove;
         }
-        return randomNumber;
+        return duplicateNumbersRemove;
     }
 
     public List<Integer> getRandomNumber() {

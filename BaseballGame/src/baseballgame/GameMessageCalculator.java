@@ -1,8 +1,8 @@
 package baseballgame;
 
 public class GameMessageCalculator {
-    private final int MAX_COUNT = 3;
-    private final int MIN_COUNT = 0;
+    private static final int MAX_COUNT = 3;
+    private static final int MIN_COUNT = 0;
 
     public void showStrikeMessage(BaseballCalculator baseballCalculator) {
         if (baseballCalculator.getStrikeCount() > MIN_COUNT && baseballCalculator.getStrikeCount() < MAX_COUNT) {
