@@ -8,7 +8,7 @@ public class RandomNumber {
     private static final int MAX_NUMBER_LENGTH = 3;
     private static final int MAX_RANDOM_NUMBER = 9;
     private static final int MIN_RANDOM_NUMBER = 1;
-    private final List<Integer> randomNumber ;
+    private List<Integer> randomNumber ;
 
     public RandomNumber(){
         randomNumber = new ArrayList<>(makeRandomNumber());
