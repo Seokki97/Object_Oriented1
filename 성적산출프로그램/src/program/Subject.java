@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 public class Subject {
 
-    private ArrayList<String> subjectName;
+    private String subjectName;
+
+    public Subject(String subjectName){
+        this.subjectName = subjectName;
+    }
 
 
 
