@@ -1,18 +1,23 @@
 public class Car {
     private final String carName;
-    private  String carPosition;
+    private int carPosition;
 
-    public Car(String carName, String carPosition) {
+
+    public Car(String carName, int carPosition) {
         this.carName = carName;
         this.carPosition = carPosition;
     }
 
-    public void move(FowardCondition fowardCondition){
-        if(fowardCondition.fowardCarCondition()){
-            carPosition += "-";
-        }
+
+
+    public String getCarName() {
+        return carName;
     }
 
-
+    public void move(GameRule gameRule){
+        if(gameRule.fowardCarCondition()){
+            carPosition++;
+        }
+    }
 
 }
