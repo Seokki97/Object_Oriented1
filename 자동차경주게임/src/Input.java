@@ -1,18 +1,22 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Input {
     final Scanner sc = new Scanner(System.in);
     int tryNumber ;
-    String[] carName;
+    List<String> carName = new ArrayList<>();
 
     public void inputMoveNumber(){
         tryNumber = sc.nextInt();
     }
 
-    public String[] inputCarName() {
+    public List<String> inputCarName() {
         String inputCarName = sc.nextLine();
-
-        carName = inputCarName.split(","); //3개가 생겼어
+        String[] das = inputCarName.split(",");
+           carName = Arrays.stream(das).collect(Collectors.toList());
         return carName;
     }
 
