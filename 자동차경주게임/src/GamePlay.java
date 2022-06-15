@@ -12,10 +12,25 @@ public class GamePlay {
         input.inputCarName();
     }
 
-    public void makeCar(){
-        for(String str : input.carName){
-          new Car(str,Car.CAR_START_POSITION);
-        }
+    public Car makeCar(){
+        return new Car("!@3");
     }
 
+    public void playGame(){
+        GameMessage.showInputCarNameMessage();
+        setCarName();
+        makeCar();
+        GameMessage.showTryNumberMessage();
+        input.inputMoveNumber();
+        do{
+            GameMessage.showResultMessage();
+            gameRule.fowardCarCondition();
+            System.out.println(car);
+        }while(true);
+    }
+
+    public static void main(String[] args) {
+        GamePlay gamePlay = new GamePlay();
+        gamePlay.playGame();
+    }
 }
