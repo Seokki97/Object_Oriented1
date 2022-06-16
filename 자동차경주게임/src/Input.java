@@ -20,4 +20,7 @@ public class Input {
         return carName;
     }
 
+    public int getTryNumber(){
+        return getTryNumber();
+    }
 }

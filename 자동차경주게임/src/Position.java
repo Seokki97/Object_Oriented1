@@ -10,7 +10,6 @@ public class Position {
     }
 
     public void setPosition(Cars cars){
-
         for(int i =0; i<cars.getCar12().size() ; i++){
             positions.add(new Position(0));
         }

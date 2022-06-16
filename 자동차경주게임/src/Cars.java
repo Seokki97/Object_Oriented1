@@ -16,7 +16,10 @@ public class Cars {
     public List<Car> getCar12(){
         return carsList;
     }
-
+    @Override
+    public String toString(){
+        return "차는"+carsList;
+    }
     public static void main(String[] args) {
         Cars ca = new Cars();
         Input input = new Input();
