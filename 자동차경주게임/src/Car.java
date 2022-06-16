@@ -6,7 +6,7 @@ public class Car {
     }
 
     public String getCarName() {
-        return carName;
+        return "자동차 이름은 "+carName;
     }
 
 
