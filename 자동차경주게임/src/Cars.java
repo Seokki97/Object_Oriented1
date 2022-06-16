@@ -3,7 +3,8 @@ import java.util.List;
 
 public class Cars {
     private  List<Car> carsList = new ArrayList<>();
-    private  List<Position> positions = new ArrayList<>();
+
+
 
     public void inputCarsList(Input input){
         GameMessage.showInputCarNameMessage();
@@ -17,11 +18,10 @@ public class Cars {
     }
 
     public static void main(String[] args) {
-        Cars cars = new Cars();
+        Cars ca = new Cars();
         Input input = new Input();
-        cars.inputCarsList(input);
 
-        System.out.println(cars.getCar12());
+        ca.inputCarsList(input);
+        System.out.println(ca.getCar12().toString());
     }
-
 }
