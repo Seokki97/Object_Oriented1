@@ -12,6 +12,4 @@ public class GamePlay {
     public void playGame(){
     }
 
-    public static void main(String[] args) {
-    }
 }
