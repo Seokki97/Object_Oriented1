@@ -1,7 +1,6 @@
 public class GamePlay {
     Input input;
     RandomNumber randomNumber;
-    Car car;
     GameRule gameRule;
     Cars cars;
     Position position;
@@ -21,10 +20,12 @@ public class GamePlay {
         GameMessage.showTryNumberMessage();
         input.inputMoveNumber();
         while(i < 5){
+            randomNumber.makeRandomNumber();
             position.move(gameRule);
             i++;
         }
-        System.out.println(cars.getCar12());
+
+        System.out.println(cars.toString());
         System.out.println(position.getPositions().toString());
     }
 

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Position {
-    private  int position;
+    private int position;
     private List<Position> positions ;
     public Position(int position) {
         this.position = position;
@@ -11,10 +11,9 @@ public class Position {
 
     public void setPosition(Cars cars){
         for(int i =0; i<cars.getCar12().size() ; i++){
-            positions.add(new Position(0));
+            positions.add(new Position(position));
         }
     }
-
 
     public int move(GameRule gameRule) {
         if(gameRule.moveCarCondition()) {

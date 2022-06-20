@@ -5,7 +5,6 @@ public class Cars {
     private  List<Car> carsList = new ArrayList<>();
 
 
-
     public void inputCarsList(Input input){
         GameMessage.showInputCarNameMessage();
         input.inputCarName();
