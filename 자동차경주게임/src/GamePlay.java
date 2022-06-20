@@ -4,7 +4,6 @@ public class GamePlay {
     Car car;
     GameRule gameRule;
     Cars cars;
-    CarPositionSetting carPositionSetting;
     Position position;
     public GamePlay(){
         randomNumber = new RandomNumber();

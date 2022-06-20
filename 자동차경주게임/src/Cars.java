@@ -18,13 +18,13 @@ public class Cars {
     }
     @Override
     public String toString(){
-        return "차는"+carsList;
+        return "차는"+carsList.get(1);
     }
     public static void main(String[] args) {
         Cars ca = new Cars();
         Input input = new Input();
 
         ca.inputCarsList(input);
-        System.out.println(ca.getCar12().toString());
+        System.out.println(ca.toString());
     }
 }
