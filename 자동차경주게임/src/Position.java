@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Position {
     private int position;
-    private List<Position> positions ;
+    private List<Integer> positions ;
     public Position(int position) {
         this.position = position;
         positions  = new ArrayList<>();
@@ -11,7 +11,7 @@ public class Position {
 
     public void setPosition(Cars cars){
         for(int i =0; i<cars.getCar12().size() ; i++){
-            positions.add(new Position(position));
+            positions.add(position);
         }
     }
 
@@ -25,8 +25,7 @@ public class Position {
     public int getPosition(){
         return position;
     }
-
-    public List<Position> getPositions()
+    public List<Integer> getPositions()
     {
         return positions;
     }

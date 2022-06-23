@@ -5,8 +5,8 @@ public class Car {
         this.carName = carName;
     }
 
-    public String getCarName() {
-        return "자동차 이름은 "+carName;
+    public String toString() {
+        return carName;
     }
 
 

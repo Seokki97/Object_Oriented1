@@ -25,8 +25,8 @@ public class GamePlay {
             i++;
         }
 
-        System.out.println(cars.toString());
-        System.out.println(position.getPositions().toString());
+        System.out.println(cars.getCar12());
+        System.out.println(position.getPositions());
     }
 
     public void RacingCalculator(){
