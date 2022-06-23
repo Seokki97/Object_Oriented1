@@ -14,6 +14,9 @@ public class GameRule {
         return false;
     }
 
+    public int getRandomNumber(){
+        return randomNumber;
+    }
 
 
 }
