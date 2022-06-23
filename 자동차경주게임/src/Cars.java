@@ -8,7 +8,7 @@ public class Cars {
     public void inputCarsList(Input input){
         GameMessage.showInputCarNameMessage();
         input.inputCarName();
-        for(String s : input.carName){
+        for(String s : input.inputCarName()){
             carsList.add(new Car(s));
         }
     }
@@ -17,13 +17,15 @@ public class Cars {
     }
     @Override
     public String toString(){
-        return "차는"+carsList.get(1);
+        return "차는"+carsList;
     }
+
     public static void main(String[] args) {
-        Cars ca = new Cars();
+        Cars cars = new Cars();
+
         Input input = new Input();
 
-        ca.inputCarsList(input);
-        System.out.println(ca.toString());
+        cars.inputCarsList(input);
+        System.out.println(cars.toString());
     }
 }

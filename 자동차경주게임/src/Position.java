@@ -25,20 +25,9 @@ public class Position {
     public int getPosition(){
         return position;
     }
+
     public List<Position> getPositions()
     {
         return positions;
-    }
-
-    public static void main(String[] args) {
-        Cars car = new Cars();
-        Position a = new Position(0);
-        RandomNumber ra = new RandomNumber();
-        GameRule gameRule = new GameRule(ra);
-        a.setPosition(car);
-        a.move(gameRule);
-        System.out.println(a.getPositions());
-
-
     }
 }
