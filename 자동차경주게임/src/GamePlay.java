@@ -21,17 +21,14 @@ public class GamePlay {
         input.inputMoveNumber();
         while(i < 5){
             randomNumber.makeRandomNumber();
+            gameRule = new GameRule(randomNumber);
             gameRule.moveCarCondition();
-            position.move(new GameRule(randomNumber));
+            position.move(gameRule);
             System.out.println(gameRule.getRandomNumber());
             System.out.println(cars.getCar12());
             System.out.println(position.getPositions());
             i++;
         }
-
-    }
-
-    public void RacingCalculator(){
 
     }
     public static void main(String[] args) {
