@@ -16,7 +16,7 @@ public class GamePlay {
         int i=0;
         GameMessage.showInputCarNameMessage();
         cars.inputCarsList(input);
-        position.setPosition(cars);
+
         GameMessage.showTryNumberMessage();
         input.inputMoveNumber();
         while(i < 5){
@@ -24,9 +24,10 @@ public class GamePlay {
             gameRule = new GameRule(randomNumber);
             gameRule.moveCarCondition();
             position.move(gameRule);
+
             System.out.println(gameRule.getRandomNumber());
             System.out.println(cars.getCar12());
-            System.out.println(position.getPositions());
+            System.out.println(cars.getPositions());
             i++;
         }
 

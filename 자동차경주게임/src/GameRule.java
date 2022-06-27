@@ -8,7 +8,7 @@ public class GameRule {
     }
 
     public boolean moveCarCondition() {
-        if (randomNumber >= FOWARD_CAR_CONDITION) {
+        if (this.randomNumber >= FOWARD_CAR_CONDITION) {
             return true;
         }
         return false;
