@@ -4,6 +4,8 @@ import java.util.List;
 public class Position {
     private int position;
 
+    public Position(){
+    }
     public Position(int position) {
         this.position = position;
 
