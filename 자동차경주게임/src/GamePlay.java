@@ -16,7 +16,7 @@ public class GamePlay {
         int i=0;
         GameMessage.showInputCarNameMessage();
         cars.inputCarsList(input);
-
+        cars.setPositions(position);
         GameMessage.showTryNumberMessage();
         input.inputMoveNumber();
         while(i < 5){

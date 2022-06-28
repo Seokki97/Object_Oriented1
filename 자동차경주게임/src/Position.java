@@ -18,4 +18,9 @@ public class Position {
     public int getPosition(){
         return position;
     }
+
+    @Override
+    public String toString(){
+        return "위치는 " +position;
+    }
 }
