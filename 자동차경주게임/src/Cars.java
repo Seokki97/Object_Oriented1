@@ -18,10 +18,9 @@ public class Cars {
         }
     }
 
-    public void movePosition(Position position){
-        for(int i = 0; i<carsList.size(); i++){
+    public void movePosition(Position position, int i){
             positions.set(i, new Position(position.getPosition()));
-        }
+
     }
 
     public List<Position> getPositions() {
