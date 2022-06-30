@@ -11,6 +11,7 @@ public class Position {
 
     }
     public int move(GameRule gameRule) {
+
         if(gameRule.moveCarCondition()==true) {
             return position+1;
         }
