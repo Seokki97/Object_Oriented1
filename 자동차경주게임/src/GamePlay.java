@@ -12,14 +12,17 @@ public class GamePlay {
         cars = new Cars();
         position = new Position();
     }
-
+    //각 car에따라 다른 moveCarRule이 필요함.
+    // add으로 position리스트를 늘리는게 아니라 인덱스로 변화를 줘야함
     public void asd(){
+
         for(int i = 0; i < input.tryNumber ; i++){
             randomNumber.makeRandomNumber();
             gameRule.moveCarCondition();
+
             gameRule = new GameRule(randomNumber);
             position = new Position(position.move(gameRule));
-            cars.setPositions(position);
+            cars.movePosition(position);
 
             System.out.println(gameRule.getRandomNumber());
             System.out.println(cars.getCar12());
