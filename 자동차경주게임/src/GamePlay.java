@@ -21,7 +21,6 @@ public class GamePlay {
         }
     }
     public void moveCarsPosition(int i){
-
         for (int j = 0; j < cars.getPositions().size(); j++) {
             randomNumber.makeRandomNumber();
             gameRule = new GameRule(randomNumber);
@@ -33,7 +32,6 @@ public class GamePlay {
             System.out.println(cars.getCar12());
             System.out.println(cars.getPositions());
         }
-
     }
 
     public void inputCarsList() {
