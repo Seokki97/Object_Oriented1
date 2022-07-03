@@ -9,16 +9,17 @@ public class GamePlay {
     private static final String SCORE_RESULT = "-";
 
 
-    private void showScore(Position position) {
-        for (int i = 0; i < position.getPosition(); i++) {
+    private Cars showScore() {
+        for (int i = 0; i < cars.getPositions().size(); i++) {
             System.out.print(SCORE_RESULT);
         }
+        return cars;
     }
 
     public void showCarsName(Cars cars){
         for(Car i : cars.getCar12()){
             System.out.print(i + ":");
-            showScore(position);
+            showScore();
             System.out.println();
         }
         System.out.println();
@@ -36,20 +37,20 @@ public class GamePlay {
             position = new Position(INITIALIZE_POSITIONS_COUNT); //초기화
 
         }
+
     }
     public void moveCarsPosition(int i){
         for (int j = 0; j < cars.getPositions().size(); j++) {
             randomNumber.makeRandomNumber();
             gameRule = new GameRule(randomNumber);
             position = new Position(position.move(gameRule));
-
             cars.movePosition(position, i);
+           System.out.println(cars.getCar12());
+           System.out.println(cars.getPositions());
 
-         /*   System.out.println(gameRule.getRandomNumber());
-            System.out.println(cars.getCar12());
-            System.out.println(cars.getPositions());*/
-            showCarsName(cars);
         }
+
+
     }
 
     public void inputCarsList() {
@@ -68,6 +69,7 @@ public class GamePlay {
         gameplay.inputCarsList();
         gameplay.inputTryNumber();
         gameplay.playGame();
+
     }
 
 }
