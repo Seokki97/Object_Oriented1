@@ -6,6 +6,23 @@ public class GamePlay {
     private final Cars cars;
     private Position position;
 
+    private static final String SCORE_RESULT = "-";
+
+
+    private void showScore(Position position) {
+        for (int i = 0; i < position.getPosition(); i++) {
+            System.out.print(SCORE_RESULT);
+        }
+    }
+
+    public void showCarsName(Cars cars){
+        for(Car i : cars.getCar12()){
+            System.out.print(i + ":");
+            showScore(position);
+            System.out.println();
+        }
+        System.out.println();
+    }
     public GamePlay() {
         randomNumber = new RandomNumber();
         input = new Input();
@@ -28,9 +45,10 @@ public class GamePlay {
 
             cars.movePosition(position, i);
 
-            System.out.println(gameRule.getRandomNumber());
+         /*   System.out.println(gameRule.getRandomNumber());
             System.out.println(cars.getCar12());
-            System.out.println(cars.getPositions());
+            System.out.println(cars.getPositions());*/
+            showCarsName(cars);
         }
     }
 
