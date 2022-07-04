@@ -10,12 +10,12 @@ public class Position {
         this.position = position;
 
     }
-    public int move(GameRule gameRule) {
+    public int move(GameRule gameRule, int i) {
 
         if(gameRule.moveCarCondition()==true) {
-            return position+1;
+            return position += i+1;
         }
-        else return position;
+        else return position += i;
     }
 
     public int getPosition(){

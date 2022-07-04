@@ -16,14 +16,15 @@ public class GamePlay {
         return cars;
     }
 
-    public void showCarsName(Cars cars){
-        for(Car i : cars.getCar12()){
+    public void showCarsName(Cars cars) {
+        for (Car i : cars.getCar12()) {
             System.out.print(i + ":");
             showScore();
             System.out.println();
         }
         System.out.println();
     }
+
     public GamePlay() {
         randomNumber = new RandomNumber();
         input = new Input();
@@ -31,25 +32,27 @@ public class GamePlay {
         cars = new Cars();
         position = new Position();
     }
+
     public void playGame() {
         for (int i = 0; i < input.tryNumber; i++) {
-            moveCarsPosition(i);
-            position = new Position(INITIALIZE_POSITIONS_COUNT); //초기화
+            moveCarsPosition();
 
         }
-
     }
-    public void moveCarsPosition(int i){
-        for (int j = 0; j < cars.getPositions().size(); j++) {
+
+    public void moveCarsPosition() {
+
+        for (int j = 0; j < cars.getCar12().size(); j++) {
+            int i =0;
             randomNumber.makeRandomNumber();
             gameRule = new GameRule(randomNumber);
-            position = new Position(position.move(gameRule));
-            cars.movePosition(position, i);
-           System.out.println(cars.getCar12());
-           System.out.println(cars.getPositions());
+            position = new Position(position.move(gameRule,i));
+            cars.movePosition(position, j);
+
+            System.out.println(cars.getCar12());
+            System.out.println(cars.getPositions());
 
         }
-
 
     }
 
