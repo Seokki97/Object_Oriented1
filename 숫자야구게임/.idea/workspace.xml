@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac4709d-a1cf-4791-a176-3773cacb1386" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Chaptor7/src/ch01/MinMaxProblem.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Chaptor7/src/ch01/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/src/ch02/BinarySearchProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chaptor7/src/ch02/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../자동차경주게임/out/production/자동차경주게임/GamePlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/../자동차경주게임/out/production/자동차경주게임/GamePlay.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../자동차경주게임/out/production/자동차경주게임/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/../자동차경주게임/out/production/자동차경주게임/Position.class" afterDir="false" />
