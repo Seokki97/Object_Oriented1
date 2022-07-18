@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d3c458b-c685-456b-bb7e-74ba571e85cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringBoot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/TodoServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../숫자야구게임/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../숫자야구게임/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
