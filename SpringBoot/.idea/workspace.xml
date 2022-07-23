@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42e88c-6d9f-4eb1-b6de-eb08eca30f3c" name="Changes" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/singleton/SocketClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/AirConditioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Cleaner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Electronic110V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Electronic220V.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/HairDryer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/SocketAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/SocketAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../designPattern.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
