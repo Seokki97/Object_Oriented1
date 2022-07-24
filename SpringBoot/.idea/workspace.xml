@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42e88c-6d9f-4eb1-b6de-eb08eca30f3c" name="Changes" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/AirConditioner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Cleaner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Electronic110V.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Electronic220V.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/HairDryer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/SocketAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DesignPattern/src/adaptorPattern/SocketAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/BrowserProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/IBrowser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/html.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/웹개발개론/웹개발이란.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DesignPattern" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
