@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce42e88c-6d9f-4eb1-b6de-eb08eca30f3c" name="Changes" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/Browser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/BrowserProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/IBrowser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DesignPattern/src/proxypattern/html.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/웹개발개론/웹개발이란.MD" afterDir="false" />
+    <list default="true" id="ce42e88c-6d9f-4eb1-b6de-eb08eca30f3c" name="Changes" comment="웹개발개론">
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/springboot란.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/웹개발개론/웹개발이란.MD" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/웹개발개론/웹개발이란.MD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -59,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658561936880</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="웹개발개론">
+      <created>1658624830794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658624830794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,6 +79,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot" />
-    <option name="LAST_COMMIT_MESSAGE" value="springboot" />
+    <MESSAGE value="웹개발개론" />
+    <option name="LAST_COMMIT_MESSAGE" value="웹개발개론" />
   </component>
 </project>
