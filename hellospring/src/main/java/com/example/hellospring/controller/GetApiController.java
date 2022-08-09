@@ -18,7 +18,7 @@ public class GetApiController {
     }
 
     //http://localhost:8080/api/get/path-variable/{name}<-- 계속 바뀔 수 있는 것들
-    @GetMapping("/path-variable/{name}")
+    @GetMapping("/path-variable/{name}") //{}안에 이름과 pathvariable 변수 이름은 똑같아야함
     public String pathVariable(@PathVariable String name){
         System.out.println("PathVariable : " + name);
         return name;
