@@ -1,5 +1,6 @@
 package com.example.hellospring.controller;
 
+import com.example.hellospring.dto.UserRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -54,4 +55,16 @@ public class GetApiController {
 
         return name+age+email;
     }
+
+    @GetMapping(path = "query-param03")
+    public String queryParam03( UserRequest userRequest){
+        System.out.println(userRequest.getAge());
+        System.out.println(userRequest.getEmail());
+        System.out.println(userRequest.getName());
+
+        return userRequest.toString();
+    }
+//여기서 requestparam 어노테이션을 안붙이는 이유는 매개변수에 객체가 들어오면 스프링부트가 자체적으로 키값들으 판단함
+//그리고 해당 객체에서 매칭을 알아서 하고 가져와줌
+
 }
