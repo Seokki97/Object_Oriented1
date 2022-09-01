@@ -1,3 +1,5 @@
+package model;
+
 public class Goods {
     private String goodsName;
     private int price;

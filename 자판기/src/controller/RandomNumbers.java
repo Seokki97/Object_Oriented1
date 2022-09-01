@@ -1,3 +1,7 @@
+package controller;
+
+import model.VendingMachine;
+
 import java.util.Random;
 
 public class RandomNumbers {
@@ -22,7 +26,6 @@ public class RandomNumbers {
         return money10;
     }
 
-
     public int makeRandomCoin50(VendingMachine vendingMachine) {
         int a = vendingMachine.getTotalMoney() / FIFTY_WON;
         if (vendingMachine.getTotalMoney() > FIFTY_WON) {
@@ -32,7 +35,6 @@ public class RandomNumbers {
         return money50;
     }
 
-
     public int makeRandomCoin100(VendingMachine vendingMachine) {
         int a = vendingMachine.getTotalMoney() / HUNDRED_WON;
         if (vendingMachine.getTotalMoney() > HUNDRED_WON) {
@@ -41,7 +43,6 @@ public class RandomNumbers {
         } else money100 = 0;
         return money100;
     }
-
 
     public int makeRandomCoin500(VendingMachine vendingMachine) {
         int a = vendingMachine.getTotalMoney() / FIVE_HUNDERED_WON;

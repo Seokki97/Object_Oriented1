@@ -1,3 +1,7 @@
+package view;
+
+import model.VendingMachine;
+
 import java.util.Scanner;
 
 public class Input {

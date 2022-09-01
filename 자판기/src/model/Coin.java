@@ -1,8 +1,9 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-public class Coin { //자판기가 보유하고 있는 금액으로 동전을 무작위 생성
+public class Coin {
     private String moneyName;
     private int moneyCount;
 
