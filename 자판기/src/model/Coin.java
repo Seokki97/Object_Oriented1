@@ -9,7 +9,7 @@ public class Coin {
 
     List<Coin> coinList = new ArrayList<>();
 
-    public Coin(String moneyName, int moneyCount){
+    public Coin(String moneyName, int moneyCount) {
         this.moneyName = moneyName;
         this.moneyCount = moneyCount;
     }

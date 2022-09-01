@@ -5,7 +5,7 @@ public class Goods {
     private int price;
     private int quantity;
 
-    public Goods(String goodsName, int price, int quantity){
+    public Goods(String goodsName, int price, int quantity) {
         this.goodsName = goodsName;
         this.price = price;
         this.quantity = quantity;

@@ -9,7 +9,7 @@ public class VendingMachine {
 
     private List<Goods> goods = new ArrayList<>();
 
-    public VendingMachine(){
+    public VendingMachine() {
         this.totalMoney = totalMoney;
     }
 
