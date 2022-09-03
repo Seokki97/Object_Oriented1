@@ -41,7 +41,7 @@ public class RandomNumbers {
         int a = vendingMachine.getTotalMoney() / HUNDRED_WON;
         if (vendingMachine.getTotalMoney() > HUNDRED_WON) {
             money100 = random.nextInt(a) + RANDOM_BOUNCE;
-            vendingMachine.setTotalMoney(vendingMachine.getTotalMoney() - (money10 * HUNDRED_WON));
+            vendingMachine.setTotalMoney(vendingMachine.getTotalMoney() - (money100 * HUNDRED_WON));
         } else money100 = INITIAL_NUMBER;
         return money100;
     }
@@ -53,5 +53,15 @@ public class RandomNumbers {
             vendingMachine.setTotalMoney(vendingMachine.getTotalMoney() - (money500 * FIVE_HUNDERED_WON));
         } else money500 = INITIAL_NUMBER;
         return money500;
+    }
+
+    @Override
+    public String toString() {
+        return "RandomNumbers{" +
+                "money10=" + money10 +
+                ", money50=" + money50 +
+                ", money100=" + money100 +
+                ", money500=" + money500 +
+                '}';
     }
 }
