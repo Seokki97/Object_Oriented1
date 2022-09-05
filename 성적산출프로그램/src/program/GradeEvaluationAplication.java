@@ -11,7 +11,9 @@ public class GradeEvaluationAplication {
         Student studentKim = new Student("김준석",20391, math);
 
         korean.addRegister(studentKang);
+        math.addRegister(studentKim);
 
         System.out.println(korean.toString());
+        System.out.println(math.toString());
     }
 }

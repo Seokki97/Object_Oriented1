@@ -41,13 +41,4 @@ public class Student {
         this.major = major;
     }
 
-   /* @Override
-    public String toString() {
-        return "Student{" +
-                "studentId=" + studentId +
-                ", studentName='" + studentName + '\'' +
-                ", major=" + major +
-                ", scoreList=" + scoreList +
-                '}';
-    }*/
 }
