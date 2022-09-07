@@ -4,6 +4,7 @@ import program.model.Score;
 
 public class MajorGrade {
     private Score score;
+
     public String getGrade(Score score) {
         String grade;
         if (score.getPoint() >= 95 && score.getPoint() <= 100)
