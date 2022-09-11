@@ -1,3 +1,5 @@
+package onetry;
+
 public class GameRule {
     private static final int FOWARD_CAR_CONDITION = 4;
     private int randomNumber;

@@ -1,3 +1,5 @@
+package onetry;
+
 public class GamePlay {
     private static final int INITIALIZE_POSITIONS_COUNT = 0;
     private final Input input;

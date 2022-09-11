@@ -1,3 +1,5 @@
+package onetry;
+
 public class GameMessage {
 
     public static void showInputCarNameMessage(){
