@@ -1,6 +1,8 @@
 package controller;
 
 import controller.dto.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,7 +15,7 @@ public class ApiController {
         return account;
     }
 
-    //JSON을 내려주는것
+    //JSON을 내려주는것, request를 하면 object mapper가 object로 변환시켜주고 이것을 json으로 변환후 response해줌
     @PostMapping
     public User json(@RequestBody User user){
         return user;
