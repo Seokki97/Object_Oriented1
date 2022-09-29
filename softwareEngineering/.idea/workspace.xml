@@ -2,59 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9d02141-b59f-4b52-bbce-b2d4d0c0b5b8" name="Changes" comment="software engineering">
-      <change afterPath="$PROJECT_DIR$/../hellospring/src/ServerToServer/서버로의 연결.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/2weeks/프로젝트 계획과 관리.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ToDoList/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ToDoList/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ToDoList/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ToDoList/ToDoList.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hellospring/src/main/java/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hellospring/src/main/java/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/4week/요구분석.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3week/요구 분석.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/3week/요구 분석.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3week/프로젝트 계획과 관리.MD" beforeDir="false" afterPath="$PROJECT_DIR$/src/3week/프로젝트 계획과 관리.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/TodoServerApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/controller/TodoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/model/TodoEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/model/TodoRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/model/TodoResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/repository/TodoRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/classes/java/main/org/example/service/TodoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/TodoServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/controller/TodoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/model/TodoEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/model/TodoRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/model/TodoResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/repository/TodoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todo-server/src/main/java/org/example/service/TodoService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +53,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663230797375</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="software engineering">
+      <created>1664093094751</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664093094751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
